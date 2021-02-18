@@ -1,0 +1,7 @@
+@mixin main-font($size, $line-height, $weight, $style) {
+  font: $style $weight #{$size}/#{$line-height} "Gilroy", "Arial", sans-serif;
+}
+
+@mixin secondary-font($size, $line-height, $weight, $style) {
+  font: $weight $style #{$size}/#{$line-height} "Open Sans", "Arial", sans-serif;
+}

@@ -1,0 +1,35 @@
+.site-navigation__list {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.site-navigation__link {
+  display: block;
+  padding: 8px $side-padding-mobile;
+
+  color: #232323;
+  text-decoration: none;
+  text-align: center;
+
+  @include main-font(16px, 120%, 500, normal);
+
+  border-bottom: 1px solid #dddddd;
+}
+
+@media (min-width: $tablet-width) {
+  .site-navigation__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .site-navigation__item {
+    margin-right: 16px;
+  }
+
+  .site-navigation__link {
+    padding: 13px 0;
+  }
+}

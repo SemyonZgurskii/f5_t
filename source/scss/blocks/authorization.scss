@@ -1,0 +1,31 @@
+.authorization {
+  display: flex;
+  padding: 8px 0;
+}
+
+.authorization__icon {
+  margin-right: 5px;
+
+  fill: #232323;
+}
+
+.authorization__text {
+  margin: 0;
+
+  color: #232323;
+
+  @include main-font(16px, 120%, 500, normal);
+}
+
+.authorization--logged-in > .authorization__icon {
+  fill: $elements-color;
+}
+.authorization--logged-in > .authorization__text {
+  color: $elements-color;
+}
+
+@media (min-width: $tablet-width) and (max-width: $tablet-width-max) {
+  .authorization__text {
+    display: none;
+  }
+}

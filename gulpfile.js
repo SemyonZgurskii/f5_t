@@ -7,11 +7,13 @@ const autoprefixer = require("autoprefixer");
 const sync = require("browser-sync").create();
 const del = require("del");
 const rename = require("gulp-rename");
+const csso = require("gulp-csso")
 
 function copy() {
   return gulp.src([
     "source/assets/fonts/*.{woff,woff2}",
     "source/assets/images/*.{jpg,png,svg,ico}",
+    "source/*.js"
   ], {base: "source"})
     .pipe(gulp.dest("public"))
 }
@@ -23,13 +25,14 @@ function html() {
 }
 
 function styles() {
-  return gulp.src("source/scss/**/*.scss")
+  return gulp.src("source/scss/main.scss")
     .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(sass())
     .pipe(postcss([autoprefixer()]))
+    .pipe(rename("style.min.css"))
+    .pipe(csso())
     .pipe(sourcemap.write("."))
-    .pipe(rename({dirname: ""}))
     .pipe(gulp.dest("public/css"))
     .pipe(sync.stream());
 }

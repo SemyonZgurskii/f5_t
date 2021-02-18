@@ -1,0 +1,16 @@
+.user-section {
+  display: flex;
+  justify-content: center;
+
+  border-bottom: 1px solid #dddddd;
+}
+
+.user-section__cart {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .user-section {
+    border: none;
+  }
+}

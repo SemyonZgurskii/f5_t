@@ -1,0 +1,29 @@
+.cart {
+  display: block;
+}
+
+.cart__image-wrapper {
+  position: relative;
+  padding-right: 11px;
+}
+
+.cart__icon {
+  fill: #000000;
+}
+
+.cart__product-counter {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 17px;
+  height: 17px;
+  padding-top: 2px;
+
+  @include main-font(10px, 1.2em, 900, normal);
+
+  text-align: center;
+  color: #ffffff;
+
+  border-radius: 50%;
+  background-color: $elements-color;
+}

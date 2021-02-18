@@ -1,0 +1,22 @@
+.search__input {
+  display: block;
+  width: 100%;
+  height: 37px;
+  padding: 10px 20px;
+
+  color: #000000;
+  @include main-font(13px, 120%, 500, normal);
+
+  border: 1px solid #bebebe;
+
+  &:hover,
+  &:focus {
+    border-color: #000000;
+  }
+
+  &::placeholder {
+    color: #9c9c9c;
+
+    @include main-font(13px, 120%, 500, italic);
+  }
+}

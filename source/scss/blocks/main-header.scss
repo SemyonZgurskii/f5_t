@@ -1,0 +1,142 @@
+.main-header__inner-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px $side-padding-mobile;
+
+  border-bottom: 1px solid #dddddd;
+}
+
+.main-header__menu-button {
+  position: relative;
+  display: block;
+  width: 20px;
+  height: 14px;
+
+  background-color: transparent;
+  border: none;
+
+  &::before {
+    position: absolute;
+    left: 0;
+    content: "";
+    display: block;
+    height: 2px;
+
+    background-color: $elements-color;
+  }
+}
+
+.main-header--menu-closed .main-header__menu-button {
+  &::before {
+    top: 0;
+    width: 20px;
+
+    box-shadow: 0 6px 0 0 $elements-color,
+    0 12px 0 0 $elements-color;
+  }
+}
+
+.main-header--menu-opened .main-header__menu-button {
+  &::before,
+  &::after {
+    top: 6px;
+    width: 23px;
+  }
+
+  &::before {
+    transform: rotate(36deg);
+  }
+
+  &::after {
+    position: absolute;
+    left: 0;
+    content: "";
+    display: block;
+    height: 2px;
+
+    background-color: $elements-color;
+
+    transform: rotate(-36deg);
+  }
+}
+
+.main-header--no-js .main-header__menu-button {
+  display: none;
+}
+
+.main-header__logo {
+  margin-left: 15px;
+}
+
+.main-header__phone-number,
+.main-header__feedback {
+  display: none;
+}
+
+.main-header__search {
+  padding: 9px $side-padding-mobile;
+}
+
+.main-header__bottom {
+  border-top: 1px solid #dddddd;
+}
+
+@media (max-width: $tablet-width - 1) {
+  .main-header--menu-closed .main-header__bottom {
+    display: none;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .main-header__top {
+    display: flex;
+    padding: 8px $side-padding-mobile;
+  }
+
+  .main-header__inner-wrapper {
+    flex-grow: 1;
+    padding: 0;
+    margin-right: 20px;
+
+    border: none;
+  }
+
+  .main-header__logo {
+    width: 202px;
+    height: 28px;
+  }
+
+  .main-header__search {
+    padding: 0;
+  }
+
+  .main-header__menu-button {
+    display: none;
+  }
+
+  .main-header__logo {
+    margin-left: 0;
+    margin-right: auto;
+  }
+
+  .main-header__search {
+    width: 35%;
+  }
+
+  .main-header__bottom {
+    display: flex;
+    align-items: center;
+    padding: 0 7%;
+
+    border: none;
+  }
+
+  .main-header__navigation {
+    margin-right: auto;
+  }
+
+  .main-header__user-section {
+    margin-right: 10px;
+  }
+}

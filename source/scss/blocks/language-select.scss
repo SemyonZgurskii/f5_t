@@ -1,0 +1,39 @@
+.language-select {
+  display: flex;
+  justify-content: center;
+  padding: 8px $side-padding-mobile;
+  margin: 0;
+
+  list-style: none;
+}
+
+.language-select__item {
+  position: relative;
+}
+
+.language-select__picker {
+  display: block;
+  width: 34px;
+  height: 18px;
+
+  background-color: transparent;
+  border: none;
+}
+
+.language-select__item:not(:last-child) {
+  margin-right: 5px;
+}
+
+.language-select__icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  display: block;
+}
+
+@media (min-width: $tablet-width) {
+  .language-select {
+    padding: 0;
+  }
+}

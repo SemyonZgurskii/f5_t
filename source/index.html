@@ -4,17 +4,30 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0>
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.min.css">
   <title>Watch Shop</title>
 </head>
 <body>
 
-  <header class="main-header">
-    <div class="main-header__advertising">
+  <svg class="svg-library">
+    <symbol id="cart-icon" viewBox="0 -31 512.00026 512">
+      <path d="m164.960938 300.003906h.023437c.019531 0 .039063-.003906.058594-.003906h271.957031c6.695312 0 12.582031-4.441406 14.421875-10.878906l60-210c1.292969-4.527344.386719-9.394532-2.445313-13.152344-2.835937-3.757812-7.269531-5.96875-11.976562-5.96875h-366.632812l-10.722657-48.253906c-1.527343-6.863282-7.613281-11.746094-14.644531-11.746094h-90c-8.285156 0-15 6.714844-15 15s6.714844 15 15 15h77.96875c1.898438 8.550781 51.3125 230.917969 54.15625 243.710938-15.941406 6.929687-27.125 22.824218-27.125 41.289062 0 24.8125 20.1875 45 45 45h272c8.285156 0 15-6.714844 15-15s-6.714844-15-15-15h-272c-8.269531 0-15-6.730469-15-15 0-8.257812 6.707031-14.976562 14.960938-14.996094zm312.152343-210.003906-51.429687 180h-248.652344l-40-180zm0 0"/><path d="m150 405c0 24.8125 20.1875 45 45 45s45-20.1875 45-45-20.1875-45-45-45-45 20.1875-45 45zm45-15c8.269531 0 15 6.730469 15 15s-6.730469 15-15 15-15-6.730469-15-15 6.730469-15 15-15zm0 0"/><path d="m362 405c0 24.8125 20.1875 45 45 45s45-20.1875 45-45-20.1875-45-45-45-45 20.1875-45 45zm45-15c8.269531 0 15 6.730469 15 15s-6.730469 15-15 15-15-6.730469-15-15 6.730469-15 15-15zm0 0"/>
+    </symbol>
+    <symbol id="truck-icon" viewBox="0 0 512 512">
+      <path d="M119.467 337.067c-28.237 0-51.2 22.963-51.2 51.2 0 28.237 22.963 51.2 51.2 51.2s51.2-22.963 51.2-51.2c0-28.237-22.964-51.2-51.2-51.2zm0 85.333c-18.825 0-34.133-15.309-34.133-34.133 0-18.825 15.309-34.133 34.133-34.133s34.133 15.309 34.133 34.133c0 18.824-15.309 34.133-34.133 34.133zM409.6 337.067c-28.237 0-51.2 22.963-51.2 51.2 0 28.237 22.963 51.2 51.2 51.2 28.237 0 51.2-22.963 51.2-51.2 0-28.237-22.963-51.2-51.2-51.2zm0 85.333c-18.825 0-34.133-15.309-34.133-34.133 0-18.825 15.309-34.133 34.133-34.133 18.825 0 34.133 15.309 34.133 34.133 0 18.824-15.308 34.133-34.133 34.133z"/><path d="M510.643 289.784l-76.8-119.467a8.535 8.535 0 00-7.177-3.917H332.8a8.53 8.53 0 00-8.533 8.533v213.333a8.525 8.525 0 008.533 8.533h34.133v-17.067h-25.6V183.467h80.674l72.926 113.442v82.825h-42.667V396.8h51.2a8.525 8.525 0 008.533-8.533V294.4a8.51 8.51 0 00-1.356-4.616z"/><path d="M375.467 277.333V217.6h68.267v-17.067h-76.8a8.53 8.53 0 00-8.533 8.533v76.8a8.525 8.525 0 008.533 8.533h128v-17.067H375.467zM332.8 106.667H8.533A8.536 8.536 0 000 115.2v273.067a8.53 8.53 0 008.533 8.533H76.8v-17.067H17.067v-256h307.2v256H162.133V396.8H332.8a8.525 8.525 0 008.533-8.533V115.2a8.53 8.53 0 00-8.533-8.533z"/><path d="M8.533 345.6h51.2v17.067h-51.2zM179.2 345.6h145.067v17.067H179.2zM469.333 345.6h34.133v17.067h-34.133zM34.133 140.8H332.8v17.067H34.133zM110.933 379.733H128V396.8h-17.067zM401.067 379.733h17.067V396.8h-17.067zM34.133 72.533H153.6V89.6H34.133zM0 72.533h17.067V89.6H0z"/>
+    </symbol>
+    <symbol id="authorization-icon" viewBox="0 0 980 980">
+      <path d="M456 1.1C352.5 8.6 256.2 47.4 176 113.9c-15 12.3-50.1 47.5-62.2 62.1C25.7 282.8-13.2 416.3 4 552.5 15.9 645.9 54.1 732.6 116.4 807c9.8 11.7 37 39.3 49.6 50.4 131 115 310.4 152.1 476 98.4 111.3-36.1 207.6-113 268.6-214.4 50.3-83.8 74.6-184 68.4-281.9C972 350 930 248.8 857.5 166c-14.6-16.6-42.7-43.4-59.9-57.3C722 48.2 636.5 12.9 540 2.5 522.6.6 473.6-.2 456 1.1zm86 45.3c102.5 13 193.3 57.4 264.8 129.5 71.9 72.5 116 165.5 127.4 268.6 1.8 16.1 1.8 74.9 0 91-2.1 18.9-6.8 45.1-11.2 62.8C880.2 769.6 738.2 900.9 564.5 930c-28.6 4.8-38.4 5.5-75.5 5.5-37.6-.1-48.6-1-79.5-6.5-119.1-21.6-225.8-92.5-292.8-194.6C78.5 676.2 55.2 612.2 46.3 541c-2.6-20.9-2.6-81.1 0-102 9.2-73.5 33.4-138.6 74-198.8C162.8 177 222.2 124.9 290.9 90.5c46-23 98.6-38.6 148.1-43.9 8-.9 16.1-1.8 18-2 9.3-1 73.2.3 85 1.8z"/><path d="M465 215.6c-59.5 7.1-114.2 41.5-147.4 92.5-17.1 26.4-28.3 58.5-31.7 90.9-1.4 13.8-.7 39.5 1.6 53 3.3 20 10.6 42.4 19.9 60.7 2 4 3.6 7.4 3.6 7.7 0 .2-3 2.6-6.7 5.2-26.1 18.6-53.8 46.9-73.4 74.9-16.3 23.2-33.9 58.6-40.4 80.8-2.1 7.4-1.4 12.9 2.4 18.9 6.2 9.8 19.5 12.5 29.7 6.2 5.4-3.4 7.8-7.2 13-21.9 8.7-24.1 27.6-56.6 45.1-77.5 11.2-13.3 32-33.2 44.8-42.8l10.8-8.1 10.4 9.9c50.1 47.8 115.9 67.6 182 54.9 39.1-7.5 75-26.3 104.5-54.8l10.4-10 11 8.2c12.1 9 38.9 35.1 48 46.7 16.5 21 34.3 52.6 42.9 76.5 4.9 13.4 7.2 16.7 14 20 6.4 3.2 13.3 3.2 19.9 0 7.2-3.4 12.5-13.7 11.2-21.8-.9-5.5-8.8-26-15.6-40.3-21.6-45.6-56.4-88.1-96.4-117.6-4.5-3.3-8.5-6.3-8.9-6.8-.5-.4 1-4.4 3.2-8.8 9.3-18.4 16.2-39.8 19.6-60.2 2.3-13.4 3-39.2 1.6-52.9-6.5-62.4-40.7-118.4-93.1-152.4-39.5-25.6-88.5-36.8-136-31.1zm57.3 45.3c42.4 9.1 78.3 33.3 101.9 68.5 20.1 30.1 30 67.6 26.9 102.3-3.2 35.4-14.9 64-37.2 90.8-38.7 46.3-99.5 67.3-158 54.5-61.3-13.3-110.6-62.5-123.8-123.3-9.3-42.9-.8-87.7 23.7-124.2 23.7-35.4 60.9-60.3 101.9-68.5 14.5-2.9 14.2-2.8 35.3-2.5 15.4.2 21.6.7 29.3 2.4z"/>
+    </symbol>
+  </svg>
+
+  <header class="main-header main-header--no-js">
+    <div class="main-header__advertising-top">
       <div class="advertising">
         <p class="advertising__text">
-          Дополнительная выгоа
+          Дополнительная выгода
           <b class="advertising__accent-text">
-            до 1300 руб и РОЗЫГРЫШ ЧАСОВ
+            до 1300 руб<br/> и РОЗЫГРЫШ ЧАСОВ
           </b>
         </p>
       </div>
@@ -22,37 +35,51 @@
 
     <section class="main-header__content">
 
-      <div class="main-header__top-wrapper">
-        <img class="main-header__logo" src="assets/images/main_logo.png" alt="логотип Watch Town" width="202" height="28">
+      <div class="main-header__top">
+        <div class="main-header__inner-wrapper">
+          <button class="main-header__menu-button" type="button" aria-label="главное меню"></button>
+          <picture>
+            <source media="(min-width: 900px)" srcset="assets/images/main_logo_big.png">
+            <img class="main-header__logo" src="assets/images/main_logo_small.png" alt="логотип Watch Town" width="123" height="17">
+          </picture>
+          <a href="#" class="cart">
+            <div class="cart__image-wrapper">
+              <svg class="cart__icon" xmlns="http://www.w3.org/2000/svg" width="26" height="21">
+                <use xlink:href="#cart-icon"></use>
+              </svg>
+              <span class="cart__product-counter">1</span>
+            </div>
+          </a>
+        </div>
         <div class="main-header__search">
           <div class="search">
-            <input class="search__input" type="text"/>
+            <input class="search__input" type="text" placeholder="Поиск товара или бренда..."/>
           </div>
         </div>
+        <div class="main-header__phone-number">
+          <a class="phone-number" href="tel:79857718800">79857718800</a>
+        </div>
+        <a href="#" class="main-header__feedback">перезвоните мне</a>
       </div>
-      <div class="main-header__phone-number">
-        <a class="phone-number" href="tel:79857718800">79857718800</a>
-      </div>
-      <a href="#" class="main-header__feedback">Перезвоните мне</a>
 
-      <div class="main-header__bottom-wrapper">
+      <div class="main-header__bottom">
         <div class="main-header__navigation">
           <nav class="site-navigation">
             <ul class="site-navigation__list">
               <li class="site-navigation__item">
-                <a href="#" class="site-navigation__link">Распродажа</a>
+                <a href="#" class="site-navigation__link">распродажа</a>
               </li>
               <li class="site-navigation__item">
-                <a href="#" class="site-navigation__link">Бренды</a>
+                <a href="#" class="site-navigation__link">бренды</a>
               </li>
               <li class="site-navigation__item">
-                <a href="#" class="site-navigation__link">Мужские часы</a>
+                <a href="#" class="site-navigation__link">мужские часы</a>
               </li>
               <li class="site-navigation__item">
-                <a href="#" class="site-navigation__link">Женские часы</a>
+                <a href="#" class="site-navigation__link">женские часы</a>
               </li>
               <li class="site-navigation__item">
-                <a href="#" class="site-navigation__link">Связаться с нами</a>
+                <a href="#" class="site-navigation__link">связаться с нами</a>
               </li>
             </ul>
           </nav>
@@ -60,7 +87,12 @@
         <div class="main-header__user-section">
           <div class="user-section">
             <div class="user-section__login">
-              <a class="login" href="#" aria-label="личный кабинет">Личный кабинет</a>
+              <a class="authorization authorization--logged-in">
+                <svg class="authorization__icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+                  <use xlink:href="#authorization-icon"></use>
+                </svg>
+                <p class="authorization__text" href="#" aria-label="личный кабинет">Личный кабинет</p>
+              </a>
             </div>
             <div class="user-section__cart">
               <a class="cart">
@@ -73,19 +105,35 @@
         <div class="main-header__language-select">
           <ul class="language-select">
             <li class="language-select__item">
-              <button class="language-select__picker" type="button" aria-label="select russian language"/>
+              <button class="language-select__picker language-select__picker--russian" type="button" aria-label="select russian language"/>
+              <img class="language-select__icon" src="assets/images/language_ru_icon.png" alt="изображение флага России" width="100%" height="auto">
             </li>
-            <li class="language-select__item" aria-label="select english language">
-              <button class="language-select__picker" type="button"/>
+            <li class="language-select__item">
+              <button class="language-select__picker language-select__picker--english" type="button" aria-label="select english language"/>
+              <img class="language-select__icon" src="assets/images/language_brit_icon.png" alt="изображение флага Великобритании" width="100%" height="auto">
             </li>
-            <li class="language-select__item" aria-label="select chinese language">
-              <button class="language-select__picker" type="button"/>
+            <li class="language-select__item">
+              <button class="language-select__picker language-select__picker--chinese" type="button" aria-label="select chinese language"/>
+              <img class="language-select__icon" src="assets/images/language_china_icon.png" alt="изображение флага Китая" width="100%" height="auto">
             </li>
           </ul>
         </div>
       </div>
+
+      <div class="main-header__advertising-bottom">
+        <div class="advertising">
+          <svg class="advertising__icon" xmlns="http://www.w3.org/2000/svg" width="30" height="24">
+            <use xlink:href="#truck-icon"></use>
+          </svg>
+          <p class="advertising__text">
+            <b class="advertising__accent-text">Бесплатная доставка по всей России</b>
+          </p>
+        </div>
+      </div>
     </section>
   </header>
+
+  <script src="main.js"></script>
 
 </body>
 </html>
