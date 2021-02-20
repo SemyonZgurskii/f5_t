@@ -1,5 +1,17 @@
 .cart {
-  display: block;
+  display: flex;
+  align-items: center;
+
+  text-decoration: none;
+
+  &:focus,
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .cart__image-wrapper {
@@ -13,8 +25,8 @@
 
 .cart__product-counter {
   position: absolute;
-  bottom: 0;
-  right: 0;
+  bottom: 1px;
+  right: -2px;
   width: 17px;
   height: 17px;
   padding-top: 2px;
@@ -26,4 +38,31 @@
 
   border-radius: 50%;
   background-color: $elements-color;
+}
+
+.cart__content-wrapper {
+}
+
+.cart__text {
+  margin: 0;
+
+  @include main-font(12px, 18px, 400, normal);
+}
+
+.cart__overall-price {
+  margin: 0;
+
+  color: $elements-color;
+
+  @include main-font(16px, 18px, 500, normal);
+}
+
+@media (min-width: $desktop-width) {
+  .cart__image-wrapper {
+    margin-right: 10px;
+  }
+
+  .cart__content-wrapper {
+    padding-bottom: 9px;
+  }
 }

@@ -1,3 +1,12 @@
+.main-header {
+  margin-bottom: 14px;
+}
+
+.main-header__top,
+.main-header__bottom {
+  max-width: $max-content-width;
+}
+
 .main-header__inner-wrapper {
   display: flex;
   justify-content: space-between;
@@ -65,8 +74,18 @@
   display: none;
 }
 
-.main-header__logo {
+.main-header__logo-link {
+  display: block;
   margin-left: 15px;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .main-header__phone-number,
@@ -89,6 +108,10 @@
 }
 
 @media (min-width: $tablet-width) {
+  .main-header {
+    margin-bottom: 18px;
+  }
+
   .main-header__top {
     display: flex;
     padding: 8px $side-padding-mobile;
@@ -115,7 +138,7 @@
     display: none;
   }
 
-  .main-header__logo {
+  .main-header__logo-link {
     margin-left: 0;
     margin-right: auto;
   }
@@ -138,5 +161,74 @@
 
   .main-header__user-section {
     margin-right: 10px;
+  }
+}
+
+.main-header__language-select {
+  margin-right: -5px;
+}
+
+@media (min-width: $desktop-width) {
+  .main-header__top,
+  .main-header__bottom {
+    max-width: $max-content-width;
+    margin: 0 auto;
+  }
+
+  .main-header__top {
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0 3px;
+  }
+
+  .main-header__inner-wrapper {
+    flex-grow: 0;
+    margin-right: 9px;
+    padding-left: 1px;
+    padding-bottom: 1px;
+  }
+
+  .main-header__search {
+    width: 480px;
+    margin-right: 7px;
+  }
+
+  .main-header__cart {
+    display: none;
+  }
+
+  .main-header__phone-number,
+  .main-header__feedback {
+    display: block;
+  }
+
+  .main-header__feedback {
+    padding: 14px 19px 16px;
+
+    color: #ffffff;
+    letter-spacing: 0.025px;
+    text-decoration: none;
+
+    @include main-font(14px, 20px, 600, normal);
+
+    background-color: $elements-color;
+
+    &:hover,
+    &:focus {
+      background-color: desaturate($elements-color, 20%);
+    }
+
+    &:active {
+      background-color: desaturate($elements-color, 30%);
+    }
+  }
+
+  .main-header__bottom {
+    justify-content: space-between;
+    padding: 6px 0 3px 2px;
+  }
+
+  .main-header__user-section {
+    margin-right: 48px;
   }
 }

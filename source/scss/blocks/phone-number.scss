@@ -1,0 +1,28 @@
+.phone-number {
+  position: relative;
+  display: block;
+  padding-left: 34px;
+
+  color: #000000;
+  letter-spacing: 0.025em;
+  text-decoration: none;
+
+  @include main-font(18px, 30px, 600, normal);
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.phone-number__icon {
+  position: absolute;
+  left: 0px;
+  top: 4px;
+
+  fill: $elements-color;
+}

@@ -6,7 +6,8 @@
 }
 
 .site-navigation__link {
-  display: block;
+  display: flex;
+  justify-content: center;
   padding: 8px $side-padding-mobile;
 
   color: #232323;
@@ -16,6 +17,39 @@
   @include main-font(16px, 120%, 500, normal);
 
   border-bottom: 1px solid #dddddd;
+
+  &:focus,
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.site-navigation__text--sail {
+  position: relative;
+  color: #eb4e42;
+  padding-right: 30px;
+
+  &::before {
+    position: absolute;
+    display: block;
+    width: 22px;
+    height: 20px;
+    content: "";
+    right: 0;
+    bottom: 0;
+
+    background-image: url("../assets/images/sail_icon.svg");
+    background-size: 22px 20px;
+    background-repeat: no-repeat;
+  }
+}
+
+.site-navigation__link.site-navigation__link--sail {
+  color: #eb4e42;
 }
 
 @media (min-width: $tablet-width) {
@@ -31,5 +65,13 @@
 
   .site-navigation__link {
     padding: 13px 0;
+
+    border-bottom: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .site-navigation__item {
+    margin-right: 23px;
   }
 }

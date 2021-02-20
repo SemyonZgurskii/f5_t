@@ -14,3 +14,15 @@
     border: none;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .user-section__login {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+  }
+
+  .user-section__cart {
+    display: block;
+  }
+}

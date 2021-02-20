@@ -1,0 +1,11 @@
+.main-content__breadcrumbs {
+  padding: 0 $side-padding-mobile;
+}
+
+@media (min-width: $desktop-width) {
+  .main-content__breadcrumbs {
+    max-width: $max-content-width;
+    margin: 0 auto;
+    padding: 0 0 0 2px;
+  }
+}
