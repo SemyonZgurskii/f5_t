@@ -1,0 +1,1285 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>watch town</title>
+</head>
+<body>
+
+  <svg class="svg-library">
+    <symbol id="cart-icon" viewBox="0 -31 512.00026 512">
+      <path d="m164.960938 300.003906h.023437c.019531 0 .039063-.003906.058594-.003906h271.957031c6.695312 0 12.582031-4.441406 14.421875-10.878906l60-210c1.292969-4.527344.386719-9.394532-2.445313-13.152344-2.835937-3.757812-7.269531-5.96875-11.976562-5.96875h-366.632812l-10.722657-48.253906c-1.527343-6.863282-7.613281-11.746094-14.644531-11.746094h-90c-8.285156 0-15 6.714844-15 15s6.714844 15 15 15h77.96875c1.898438 8.550781 51.3125 230.917969 54.15625 243.710938-15.941406 6.929687-27.125 22.824218-27.125 41.289062 0 24.8125 20.1875 45 45 45h272c8.285156 0 15-6.714844 15-15s-6.714844-15-15-15h-272c-8.269531 0-15-6.730469-15-15 0-8.257812 6.707031-14.976562 14.960938-14.996094zm312.152343-210.003906-51.429687 180h-248.652344l-40-180zm0 0"/><path d="m150 405c0 24.8125 20.1875 45 45 45s45-20.1875 45-45-20.1875-45-45-45-45 20.1875-45 45zm45-15c8.269531 0 15 6.730469 15 15s-6.730469 15-15 15-15-6.730469-15-15 6.730469-15 15-15zm0 0"/><path d="m362 405c0 24.8125 20.1875 45 45 45s45-20.1875 45-45-20.1875-45-45-45-45 20.1875-45 45zm45-15c8.269531 0 15 6.730469 15 15s-6.730469 15-15 15-15-6.730469-15-15 6.730469-15 15-15zm0 0"/>
+    </symbol>
+    <symbol id="truck-icon" viewBox="0 0 512 512">
+      <path d="M119.467 337.067c-28.237 0-51.2 22.963-51.2 51.2 0 28.237 22.963 51.2 51.2 51.2s51.2-22.963 51.2-51.2c0-28.237-22.964-51.2-51.2-51.2zm0 85.333c-18.825 0-34.133-15.309-34.133-34.133 0-18.825 15.309-34.133 34.133-34.133s34.133 15.309 34.133 34.133c0 18.824-15.309 34.133-34.133 34.133zM409.6 337.067c-28.237 0-51.2 22.963-51.2 51.2 0 28.237 22.963 51.2 51.2 51.2 28.237 0 51.2-22.963 51.2-51.2 0-28.237-22.963-51.2-51.2-51.2zm0 85.333c-18.825 0-34.133-15.309-34.133-34.133 0-18.825 15.309-34.133 34.133-34.133 18.825 0 34.133 15.309 34.133 34.133 0 18.824-15.308 34.133-34.133 34.133z"/><path d="M510.643 289.784l-76.8-119.467a8.535 8.535 0 00-7.177-3.917H332.8a8.53 8.53 0 00-8.533 8.533v213.333a8.525 8.525 0 008.533 8.533h34.133v-17.067h-25.6V183.467h80.674l72.926 113.442v82.825h-42.667V396.8h51.2a8.525 8.525 0 008.533-8.533V294.4a8.51 8.51 0 00-1.356-4.616z"/><path d="M375.467 277.333V217.6h68.267v-17.067h-76.8a8.53 8.53 0 00-8.533 8.533v76.8a8.525 8.525 0 008.533 8.533h128v-17.067H375.467zM332.8 106.667H8.533A8.536 8.536 0 000 115.2v273.067a8.53 8.53 0 008.533 8.533H76.8v-17.067H17.067v-256h307.2v256H162.133V396.8H332.8a8.525 8.525 0 008.533-8.533V115.2a8.53 8.53 0 00-8.533-8.533z"/><path d="M8.533 345.6h51.2v17.067h-51.2zM179.2 345.6h145.067v17.067H179.2zM469.333 345.6h34.133v17.067h-34.133zM34.133 140.8H332.8v17.067H34.133zM110.933 379.733H128V396.8h-17.067zM401.067 379.733h17.067V396.8h-17.067zM34.133 72.533H153.6V89.6H34.133zM0 72.533h17.067V89.6H0z"/>
+    </symbol>
+    <symbol id="authorization-icon" viewBox="0 0 980 980">
+      <path d="M456 1.1C352.5 8.6 256.2 47.4 176 113.9c-15 12.3-50.1 47.5-62.2 62.1C25.7 282.8-13.2 416.3 4 552.5 15.9 645.9 54.1 732.6 116.4 807c9.8 11.7 37 39.3 49.6 50.4 131 115 310.4 152.1 476 98.4 111.3-36.1 207.6-113 268.6-214.4 50.3-83.8 74.6-184 68.4-281.9C972 350 930 248.8 857.5 166c-14.6-16.6-42.7-43.4-59.9-57.3C722 48.2 636.5 12.9 540 2.5 522.6.6 473.6-.2 456 1.1zm86 45.3c102.5 13 193.3 57.4 264.8 129.5 71.9 72.5 116 165.5 127.4 268.6 1.8 16.1 1.8 74.9 0 91-2.1 18.9-6.8 45.1-11.2 62.8C880.2 769.6 738.2 900.9 564.5 930c-28.6 4.8-38.4 5.5-75.5 5.5-37.6-.1-48.6-1-79.5-6.5-119.1-21.6-225.8-92.5-292.8-194.6C78.5 676.2 55.2 612.2 46.3 541c-2.6-20.9-2.6-81.1 0-102 9.2-73.5 33.4-138.6 74-198.8C162.8 177 222.2 124.9 290.9 90.5c46-23 98.6-38.6 148.1-43.9 8-.9 16.1-1.8 18-2 9.3-1 73.2.3 85 1.8z"/><path d="M465 215.6c-59.5 7.1-114.2 41.5-147.4 92.5-17.1 26.4-28.3 58.5-31.7 90.9-1.4 13.8-.7 39.5 1.6 53 3.3 20 10.6 42.4 19.9 60.7 2 4 3.6 7.4 3.6 7.7 0 .2-3 2.6-6.7 5.2-26.1 18.6-53.8 46.9-73.4 74.9-16.3 23.2-33.9 58.6-40.4 80.8-2.1 7.4-1.4 12.9 2.4 18.9 6.2 9.8 19.5 12.5 29.7 6.2 5.4-3.4 7.8-7.2 13-21.9 8.7-24.1 27.6-56.6 45.1-77.5 11.2-13.3 32-33.2 44.8-42.8l10.8-8.1 10.4 9.9c50.1 47.8 115.9 67.6 182 54.9 39.1-7.5 75-26.3 104.5-54.8l10.4-10 11 8.2c12.1 9 38.9 35.1 48 46.7 16.5 21 34.3 52.6 42.9 76.5 4.9 13.4 7.2 16.7 14 20 6.4 3.2 13.3 3.2 19.9 0 7.2-3.4 12.5-13.7 11.2-21.8-.9-5.5-8.8-26-15.6-40.3-21.6-45.6-56.4-88.1-96.4-117.6-4.5-3.3-8.5-6.3-8.9-6.8-.5-.4 1-4.4 3.2-8.8 9.3-18.4 16.2-39.8 19.6-60.2 2.3-13.4 3-39.2 1.6-52.9-6.5-62.4-40.7-118.4-93.1-152.4-39.5-25.6-88.5-36.8-136-31.1zm57.3 45.3c42.4 9.1 78.3 33.3 101.9 68.5 20.1 30.1 30 67.6 26.9 102.3-3.2 35.4-14.9 64-37.2 90.8-38.7 46.3-99.5 67.3-158 54.5-61.3-13.3-110.6-62.5-123.8-123.3-9.3-42.9-.8-87.7 23.7-124.2 23.7-35.4 60.9-60.3 101.9-68.5 14.5-2.9 14.2-2.8 35.3-2.5 15.4.2 21.6.7 29.3 2.4z"/>
+    </symbol>
+    <symbol id="phone-icon" viewBox="0 0 950 981">
+      <path d="M287.6 3.1c-9.8 3.4-54 31.8-81.6 52.5-58.7 44-81 78.5-81 125.5 0 22.4 4.3 45.5 19 103.6 10.3 40.1 18.5 65.7 41 127.3 41.6 113.8 82.4 185.5 148.1 260.5 23.6 27 64.1 66.4 97.4 95 15.8 13.5 105.2 75 145.5 100 79.2 49.1 124 63.4 165.3 52.5 22.9-6 48.8-21.9 84.2-51.5 29.9-25 62.1-53.9 63.8-57.1 5.6-10.8 6.1-28.3 1.2-44.9-6.8-23.2-26-55-51.4-84.9-33.9-40.1-83.4-83.5-108.1-95-16.3-7.6-37.6 2.4-63.8 29.9-23 24.1-44.8 59-59.8 95.6-2.5 6.3-4.8 11.6-5 11.8-.6.7-23.2-12.7-39.9-23.6C453.4 628.6 367.4 519.4 316.7 388c-10-25.8-23.6-71.1-22.4-74.3.3-.8 2.5-1.8 4.9-2.2 2.4-.4 12.5-2.9 22.5-5.6 70.1-18.8 116-43.2 128.4-68.5 3.1-6.2 3.4-7.6 3.3-15.4-.1-8.3-.2-8.9-8.1-27.5-37.1-87.3-65.2-136.6-95.5-167.7C328.5 5 306.5-3.4 287.6 3.1zM444.6 33.2c-8.3.5-15.2 1-15.3 1.2-.2.2 2.3 4.6 5.5 9.8 6.3 9.9 19.5 33.2 23.2 40.9l2.3 4.6 23.6.6c26.3.7 36.5 1.6 59.1 5.3 169.9 27.7 306.7 159.9 340.5 328.9 4.4 22.1 6.3 37.3 7.7 62.2 2.3 41.8-3.2 91.4-14.6 131.1-2 6.8-3.6 12.9-3.6 13.6 0 .7 5.4 7.8 12 15.7 6.6 7.9 15.8 19.7 20.3 26.1 4.5 6.4 8.5 11.7 8.8 11.7 1.7.2 15.2-39.9 20.4-60.4 10.4-40.5 14.5-74 14.5-118 0-54.6-7.1-98.6-24-149.5-28.9-86.8-82-163-154-220.7-16.3-13.1-42.6-31.2-59.5-40.9-81.1-46.5-172.3-67.8-266.9-62.2z"/><path d="M69.2 261.7C32.4 323.5 11.8 384.3 3.5 456c-2.3 19-3.1 62.7-1.6 83 4.7 63.6 20 120.2 47.6 176.5 32.7 66.7 80.6 124.6 140.4 169.9 109.7 83.1 253 114.3 387 84.4 14.4-3.2 35.8-8.9 40.6-10.8l3-1.2-9-4.2c-12.3-5.8-30.9-16-49.7-27.3-8.7-5.2-16.1-9.2-16.6-8.9-.4.2-8.8 1.5-18.7 2.8-15.6 2-22.4 2.3-50.5 2.3-33.1 0-42.3-.6-67-4.6-85.5-13.6-165.1-54.2-227.1-115.9-59.7-59.3-98.7-131.6-115.4-213.9-9.4-46.4-10.5-97.7-3-146.3 5-32.2 15.1-67.6 27.8-97.2l5.5-12.7-6.3-24.7c-3.5-13.6-8-31.9-10-40.7-2-8.8-3.8-16.1-4-16.3-.1-.2-3.4 5-7.3 11.5z"/>
+    </symbol>
+    <symbol id="search-icon" viewBox="0 0 512 512">
+      <path d="M495 466.2L377.2 348.4c29.2-35.6 46.8-81.2 46.8-130.9C424 103.5 331.5 11 217.5 11 103.4 11 11 103.5 11 217.5S103.4 424 217.5 424c49.7 0 95.2-17.5 130.8-46.7L466.1 495c8 8 20.9 8 28.9 0 8-7.9 8-20.9 0-28.8zm-277.5-83.3C126.2 382.9 52 308.7 52 217.5S126.2 52 217.5 52C308.7 52 383 126.3 383 217.5s-74.3 165.4-165.5 165.4z"/>
+    </symbol>
+    <symbol id="slider-arrow-icon" viewBox="0 0 1600 1600">
+      <path d="M202.5 403.6c-3.3.8-9.4 3.1-13.5 5.1-7.1 3.5-10.1 6.3-60.3 56.2-35 34.8-54.3 54.8-57.2 59.1-14.4 21.6-13.6 51.2 2.1 71.6 3 3.8 536.5 534.6 667.4 663.9 19.3 19.1 23.5 22.8 29.6 25.8 11.1 5.6 17.5 7.1 29.4 7.1 11.9 0 18.3-1.5 29.4-7.1 6.1-3 10.4-6.8 30.6-26.8 107.6-106.3 661.4-656.9 664.8-660.9 8.3-9.9 14.2-26.4 14.2-39.8 0-8.5-2.6-18.6-7.1-27.8-4.1-8.4-4.6-8.9-58.3-62.6-59.5-59.6-59.3-59.4-75.6-63.5-10.5-2.7-25.2-2.3-35 .9-14.9 4.9-13.9 4-105 93.7-77 75.8-457.5 448-458 448S588.4 740 311.4 468.5c-58.3-57.1-60.7-59.2-74.4-63.7-8.5-2.8-25.9-3.4-34.5-1.2z"/>
+    </symbol>
+    <symbol id="share-icon" viewBox="0 0 370 341">
+      <path d="M290.5 1.1c-33.7 5.2-58 32.6-59 66.4l-.2 8.9-45.2 20.7c-24.8 11.4-46.5 21.2-48.1 21.9-2.9 1.2-3.2 1.1-7.8-3.2-9.8-9.1-23.2-16.4-35.9-19.4-8.9-2.2-25.6-2.2-34.7 0-25.5 6-46.8 25.3-55.1 49.6-12.2 35.7 3.9 74.1 38.2 91.4 15.8 7.9 36.6 10.1 53.7 5.7 10.4-2.7 23.9-10 31.8-17.1l6.3-5.7 48.4 22.1 48.4 22.2.2 8.9c.9 30.9 19.9 55.2 50.5 64.6 9.5 2.9 25.2 3.2 35 .6 31.3-8.2 52.3-34.8 52.3-66.2 0-30.8-19.4-56.2-50.3-65.6-9.6-2.9-26.2-3.2-36-.5-12.8 3.5-28.8 13.4-35.4 22.1-1.5 1.9-3.2 3.5-3.9 3.5-.7 0-21.7-9.5-46.7-21-36.1-16.6-45.5-21.3-45.4-22.7.1-1 .6-5.5 1.2-10 .8-5.8.8-10.7.1-16-.5-4.3-1.1-8.6-1.2-9.6-.2-1.4 3.3-3.4 15.8-9.1C228 115.9 243.2 109 244 109c.5 0 2.4 1.8 4.2 4.1 6.8 8.5 21.8 17.7 34.8 21.4 9.7 2.8 26.2 2.6 36-.4 31-9.5 50.3-34.6 50.3-65.6 0-26.2-14.2-48.9-37.8-60.5-4.4-2.2-10.6-4.6-13.7-5.4-7.7-2-20-2.7-27.3-1.5zm24.6 37.3c6.7 3.1 13.1 9.7 16.5 16.9 3.6 7.8 3.4 19-.5 27.2-3.2 6.9-10 13.7-16.9 16.8-3.7 1.7-6.6 2.2-13.7 2.2-10.8 0-15.9-2-23.3-8.9-11.1-10.4-13.8-25.6-6.8-39.4 2.4-4.8 9.2-11.8 13.7-14.3 8.9-4.7 21.8-5 31-.5zM91.2 134.9c7.5 2.9 15.5 10.3 19.9 18.3 3.3 6 3.4 6.7 3.4 16.8 0 9.9-.2 10.9-3.2 16.6-4.1 7.8-12.5 15.5-20.1 18.5-8 3.2-20.4 3.1-28.5 0-7.6-3-16.4-11.1-20.2-18.8-2.8-5.3-3-6.7-3-16.3 0-9.5.3-11 2.8-16 3.1-6 9.3-12.9 14.5-16.2 9.8-6 23.2-7.2 34.4-2.9zm223 106.8c6.8 3.1 13.6 9.8 16.9 16.8 3.9 8.2 4.1 19.4.5 27.2-3.4 7.1-9.7 13.7-16.5 17-4.9 2.4-6.8 2.8-14.6 2.7-10.8 0-16-2-23.4-8.9-13-12.1-14.1-32.5-2.5-45.4 8.1-9.1 15.6-12.3 27.4-11.8 4.8.2 9.2 1.1 12.2 2.4z"/>
+    </symbol>
+    <symbol id="vk-icon" viewBox="0 0 24 24">
+      <path d="M19.915 13.028c-.388-.49-.277-.708 0-1.146.005-.005 3.208-4.431 3.538-5.932l.002-.001c.164-.547 0-.949-.793-.949h-2.624c-.668 0-.976.345-1.141.731 0 0-1.336 3.198-3.226 5.271-.61.599-.892.791-1.225.791-.164 0-.419-.192-.419-.739V5.949c0-.656-.187-.949-.74-.949H9.161c-.419 0-.668.306-.668.591 0 .622.945.765 1.043 2.515v3.797c0 .832-.151.985-.486.985-.892 0-3.057-3.211-4.34-6.886-.259-.713-.512-1.001-1.185-1.001H.9c-.749 0-.9.345-.9.731 0 .682.892 4.073 4.148 8.553C6.318 17.343 9.374 19 12.154 19c1.671 0 1.875-.368 1.875-1.001 0-2.922-.151-3.198.686-3.198.388 0 1.056.192 2.616 1.667C19.114 18.217 19.407 19 20.405 19h2.624c.748 0 1.127-.368.909-1.094-.499-1.527-3.871-4.668-4.023-4.878z"/>
+    </symbol>
+    <symbol id="youtube-icon" viewBox="0 0 641 448">
+      <path d="M259 .7C175.6 1.9 102.1 6.6 76 12.2c-16.4 3.5-30.7 11.5-42.1 23.4C19 51.4 13.5 65.4 8.5 100.4-4.9 194.1.8 352 19 390.8c10.3 22.1 30.7 38.4 55.2 44.2 54.3 12.8 294.2 17 432.3 7.5 45.2-3.2 64.9-6.5 79.1-13.6 18.7-9.2 33.5-26.4 40.2-46.4 6.1-18 10.8-56.5 13.3-108 1.3-27.4.7-102.6-1.1-126-2.7-37.1-7.4-68.6-12.4-83.1-9.7-28.7-33.2-48-65.1-53.8C513.8 3.3 388.2-1.3 259 .7zm162.8 223.1c.2.8-162.5 95.2-164.1 95.2-.4 0-.7-42.9-.7-95.4v-95.4l82.2 47.4c45.3 26 82.4 47.7 82.6 48.2z"/>
+    </symbol>
+    <symbol id="instagram-icon" viewBox="0 0 514 514">
+      <path d="M128.3 1C94.7 3.9 65.4 17.5 41.5 41.5c-16.2 16.1-26.8 33.2-34 54.9C.2 118.1.5 111.5.5 257s-.3 138.9 7 160.6c7.2 21.7 17.8 38.8 34 54.9 20.9 21 46.2 34.1 75.5 39.2 9.8 1.7 19.2 1.8 140.5 1.8 145 0 138.4.3 160.1-7 21.7-7.2 38.8-17.8 54.9-34 16.2-16.1 26.8-33.2 34-54.9 7.3-21.7 7-15.1 7-160.1 0-121.3-.1-130.7-1.8-140.5-5.1-29.3-18.2-54.6-39.2-75.5-16.1-16.2-33.2-26.8-54.8-34C396.3.3 402.6.6 263 .4c-69-.1-129.6.2-134.7.6zm290.1 70.4c25.8 12.7 31.5 45.9 11.2 66.1-23.8 23.8-64.3 10.6-69.8-22.7-2.8-16.8 6-34.6 21-42.6 8-4.3 12.2-5.2 22-4.8 7.2.3 9.4.9 15.6 4zM278 118.5c38.8 5.8 73.6 28.1 96 61.4 6 9 14.5 27.1 17.5 37.6 17.1 59.2-5.9 121.9-57.4 156.5-9 6-27.1 14.5-37.6 17.5-33.1 9.6-68.5 6.7-99.1-7.9-30.7-14.7-52.3-36.3-67-67-18-37.7-18-81.5 0-119.2 14.7-30.7 36.3-52.3 67-67 24.7-11.8 53.4-16.1 80.6-11.9z"/><path d="M394.9 98.5c-3.5 1.9-6.3 7.9-5.5 11.8.8 4.1 5.2 8.5 9.2 9.3 4.2.8 10-2 11.9-5.7 5.3-10.1-5.6-20.8-15.6-15.4zM235.5 149c-23.2 5-42.4 15.6-58.2 32.3-12.9 13.6-22.1 30-27 48.4-2.4 8.8-2.7 11.5-2.7 27.3s.3 18.5 2.7 27.3c3 11.2 9.5 25.6 15.7 34.7 5.6 8.2 16.7 19.8 24.9 26.1 9.1 6.9 26.7 15.4 38.6 18.6 9.1 2.4 11.6 2.7 27.5 2.7 15.8 0 18.5-.3 27.3-2.7 11.2-3 25.6-9.5 34.7-15.7 8.2-5.6 19.8-16.7 26.1-24.9 6.9-9.1 15.4-26.7 18.6-38.6 2.4-9.1 2.7-11.6 2.7-27.5s-.3-18.4-2.7-27.5c-3.2-11.9-11.7-29.5-18.6-38.6-6.3-8.2-17.9-19.3-26.1-24.9-9.2-6.2-23.6-12.7-34.7-15.7-13.6-3.6-35.7-4.2-48.8-1.3z"/>
+    </symbol>
+    <symbol id="facebook-icon" viewBox="0 0 24 24">
+      <path d="M15.997 3.985h2.191V.169C17.81.117 16.51 0 14.996 0c-3.159 0-5.323 1.987-5.323 5.639V9H6.187v4.266h3.486V24h4.274V13.267h3.345l.531-4.266h-3.877V6.062c.001-1.233.333-2.077 2.051-2.077z"/>
+    </symbol>
+    <symbol id="page-up-icon" viewBox="0 0 673 1196">
+      <path d="M168.7 168.8L1 336.5l21.2 21C33.9 369.1 50.1 385 58.3 393L73 407.5l107-107 107-107V1196h100V193.5l107 107 107 107 14.7-14.5c8.2-8 24.4-23.9 36.1-35.5l21.2-21-167.7-167.7C413 76.5 337.3 1 337 1c-.3 0-76 75.5-168.3 167.8z"/>
+    </symbol>
+    <symbol id="chat-icon" viewBox="0 0 370 370">
+      <path d="M56.7 1.1c-7.1 1-17.5 5.3-25 10.3-8.6 5.7-19.8 18.2-24 26.8C.2 53.6.5 48.5.5 143.5c0 69.2.3 86 1.4 90.5 4.7 18.8 19.6 33.1 41.4 39.9 8.8 2.7 16 3 93.1 3.6l62.9.6 3.2 2.7c1.8 1.5 24.2 21.8 49.9 45.2 25.7 23.4 47.1 42.6 47.6 42.8.6.2 1-16.2 1-45.7 0-25.4.3-46 .8-45.9.4.1 3.7-.1 7.3-.5 14.6-1.6 28.9-8.7 40.4-20.2 6.6-6.6 9-9.7 12.8-17.5 2.5-5.2 5.2-12 5.9-15 1-4.2 1.3-24.7 1.3-86.5v-81l-2.8-8c-7.9-22.4-23.7-38-46.3-45.6L311.9 0 187.2.1c-68.6.1-127.3.5-130.5 1zM306 23.9c11.2 1.1 18.5 4.5 26.8 12.7 9 9 12.4 16.6 13.3 30.4 1 14.3 1 130.9 0 144-1 13.1-3.8 19.4-12.4 28.6-4.4 4.8-8 7.4-13.6 10.2l-7.6 3.7-17.2.3-17.3.4-.1 6.6c-.1 3.7-.5 18-.8 31.9l-.6 25.1-34.3-31.9-34.3-31.8-77.7-.3c-77-.3-77.8-.3-83.4-2.5-10.8-4.1-17.5-10-21.4-18.8-1.6-3.7-1.8-9.9-2.1-74-.2-38.5 0-77.2.4-86.1.8-15.4 1-16.4 4.3-23 4.2-8.6 13.2-17.8 21.5-21.8C54 25.4 57.6 24.5 64 24c11.8-1 231.6-1 242-.1z"/><path d="M121.5 92.7c-22.6.3-24.6.7-27.1 5.5-2.5 4.9-1.8 9.6 2 13.4l3.4 3.4H184c91.8 0 89.2.2 91.9-5.6 2.6-5.8.3-13.3-4.6-15.2-2.7-1.1-99.4-2-149.8-1.5zM122.5 162.9c-7.6 3.2-8.6 15.1-1.6 19.8 2.4 1.7 6.4 1.8 56.1 1.9 29.4.1 57.7-.1 62.7-.5 11.2-.7 13.3-2.2 14.1-9.9.4-4.4.1-5.3-2.6-8.3l-3-3.4-61.9-.2c-34-.1-62.7.2-63.8.6z"/>
+    </symbol>
+    <symbol id="view-around-icon" viewBox="0 0 2150 1222">
+      <path d="M1853 .6c-27.5 5.1-47.1 14.8-65.3 32.3-21.8 21-33.7 49.4-33.7 80.5 0 31.7 11.1 59.1 32.4 80.1 17.1 16.8 39.8 27.9 64.5 31.6 13.3 1.9 38.4.7 50.4-2.4 35.2-9.2 65.6-35 78.3-66.2 6.9-16.8 7.8-21.9 7.8-44 .1-18.8-.1-20.6-2.6-29.8-11.1-39.6-41-68.7-81.5-79.4-8.6-2.2-12.1-2.6-28.8-2.9-10.4-.1-20.1 0-21.5.2zm26.5 54.4c26.2 3.7 45.5 28.3 45.5 58 0 26.6-15 48.8-37.9 56.1-9.3 3-23.2 3-32.1-.1-23.6-7.9-38.1-28.6-38.3-54.5-.2-30.5 18.5-54.9 45.6-59.4 7.2-1.2 9.2-1.2 17.2-.1zM669.3 131.1c-63.9 4-121.9 36.8-144.2 81.5-8 16-11.5 30.7-11.6 48.9v12l59.6.3 59.6.2.6-6c2-22.7 25.9-41.2 55.2-42.7 30.2-1.6 51.4 11.3 61.3 37.5 2.3 6 2.6 8.2 2.6 20.7.1 15.7-1.3 22.5-6.6 33.5-4.2 8.8-15.9 20.4-24.9 24.8-12.6 6.1-15.7 6.5-56.1 6.9l-36.8.5V440h30.8c42.6 0 55.4 1.8 70.5 9.7C750.7 461 761 481 761 511.4c0 19.8-4.5 31.3-17.5 44.3-13.8 13.8-28.8 19.5-51.5 19.5-22.6-.1-41.4-8.4-54.5-24.1-6.9-8.4-12.4-22.5-12.5-31.9V516H505v11.2c0 39.2 15.1 73 42.7 96.1 30.7 25.6 72.3 41.8 117.3 45.8 16.3 1.4 46.6.7 63.5-1.6 66.5-8.9 119.5-41.9 141.4-88 7.7-16 11.4-30.5 13.1-51.3 3.8-44.1-11.1-82.5-42-108.5-10.8-9.2-18.6-14.1-32.7-20.9l-12.4-6.1 9.6-5.1c27.5-14.6 50.7-39.2 61.5-65.3 6.6-15.9 7.4-20.6 7.4-44.3 0-18.6-.3-22.9-2.3-32-7.6-35.3-25.7-61.9-56-82.2-29.8-19.9-64.7-30.2-111.4-32.8-18.8-1-17.8-1.1-35.4.1zM1125 130.7c-60.8 2.6-110.2 23.8-148.7 63.6-29.6 30.7-46.7 67.2-53.8 115-2.5 16.2-3.5 44.6-3.5 97.2.1 73 1.5 94.3 8.5 122 14 55.7 47 98.4 94.5 122.1 37.1 18.6 86.4 24.2 132.9 15.3 60.9-11.8 112.5-57.5 131.4-116.4 7.1-22.1 8.2-30.5 8.2-62.5 0-22.9-.4-30.7-1.8-39.5-3.9-23.6-9.3-40.7-18.8-60-12.1-24.7-28.3-44-47.6-56.8-23.3-15.6-46.8-22-80.3-21.9-40.3 0-73.7 11.1-95.7 31.8-4.2 4-5.3 4.6-5.7 3.2-.9-3.5 1.4-29.9 3.4-39.9 8.2-40 33.7-67.6 69.4-75 10.5-2.2 31.8-2.5 47.4-.8 11.4 1.2 31.9 5.6 48.7 10.4 6.6 1.8 12.2 3.2 12.4 3 .5-.5 20.1-86.5 20.1-88.1 0-2.9-41.7-15.9-62.3-19.4-10.7-1.8-42-4.2-49.2-3.8-1.6.1-5.9.3-9.5.5zm5.3 275.1c26.2 9.5 42.7 41.6 42.7 83.2 0 36-17 70.5-40.1 81.4-20.8 9.9-45.3 5.1-62.1-12.1-10.4-10.7-17.4-24.1-22.3-42.5-4.5-16.9-5.6-27.6-6.2-58.4l-.6-29 5.9-5.2c10.3-9.2 28.5-16.8 45.9-19.1 11.6-1.6 30-.7 36.8 1.7zM1495.5 130.6c-50.3 2.9-87.3 18.7-117.6 50.2-28.6 29.6-43.3 64.6-51 121.2-1.7 12-2.4 163.6-1 183 5.7 74.5 30.8 124.7 78.1 156.5 30.2 20.2 67.6 29.7 112 28.2 33.9-1.2 60.8-8.2 86.2-22.4 18.2-10.3 38.3-28.5 50.6-45.8 13.2-18.6 25.1-47 30.6-73.2 5.9-28.2 5.9-27.6 6.3-120.8.5-93.8.1-102-5.3-129.8-10.3-52.9-34.9-93-72.4-118-23.3-15.4-48.6-24.5-77-27.6-11.3-1.2-31.1-2-39.5-1.5zm22.6 95.4c9.3 1.7 18.9 7.2 26 14.8 10.2 10.7 16 23.5 19.8 43.6 3.9 20.3 4.3 31.3 3.9 124.1-.5 95.7-.5 96.9-6 118-2.6 10.3-9.4 24.6-14.7 31.2-8.8 10.9-22.8 17.4-38.1 17.6-16.1.2-29-5.1-38.9-15.9-9.8-10.8-15.6-24.3-19.2-45.3-3.6-21.2-4.1-37.1-3.6-124.1.4-90.3.6-93.3 6.2-115.6 6.6-26.2 21-43.2 40.8-48 6.5-1.5 16.7-1.7 23.8-.4z"/><path d="M376.5 302.4C153.4 383 18.9 497.5 1.6 621.9c-2 14.3-2.1 43.1-.1 57 13.4 94 90.7 182.7 225 258.1 169 94.9 421.7 160.2 692.5 178.9 15.7 1.1 33.1 2.3 38.8 2.7l10.2.6v40.7c0 38.6.1 40.8 2.1 45.1 5.9 13.2 22.2 20.3 35.5 15.6 5.4-1.9 228.1-124.1 232.4-127.5 1.9-1.5 4.9-5 6.5-7.6 2.8-4.5 3-5.5 3-14.4 0-11-1.5-15.1-7.5-21.1-4.7-4.6-230.5-128.4-237.3-130.1-12.3-3-26.3 3.6-32.1 15.3l-2.6 5.2v78.6h-5.2c-15.2 0-92.8-6.7-133.8-11.6-163.1-19.2-314.3-56.8-434.5-108-28.1-12-74.2-34.9-96.5-48C195.3 791.2 135.5 723.1 120.9 650c-3.1-15.5-3.4-44.3-.5-59.5 7.9-42.2 28.8-79.3 66.1-117.4 49.8-50.9 118.9-93.6 214-132.2 20-8.2 25.7-11.7 28.1-17.5 1.8-4.3 1.8-12.5 0-16.7-1.7-4.3-8.5-10.1-13.5-11.5-8.7-2.7-14.1-1.7-38.6 7.2zM1780.5 326.4c-12.8 5.9-17.3 20.2-9.8 31.1 2.5 3.6 5.8 5.5 29.8 17.5 88.9 44.5 148.3 89.2 187.6 141.2 59.7 79.2 58.1 163.7-4.6 242.4-16.2 20.3-44.9 47-71.5 66.8-114 84.3-305.3 149-528 178.6-20.6 2.7-24.3 3.6-32.3 7.8-30 15.5-35.8 56.5-11.3 80 9.6 9.2 21.4 14.2 33.6 14.2 5.9 0 39.9-4.2 69.1-8.5 231.8-34.3 429.6-103 556-193.1 43.9-31.3 77.6-63.5 103-98.4 46.8-64.1 59.8-134.6 37.4-202.5-27.2-82.6-104.6-160-226.5-226.2-29.2-15.9-71.4-35.8-102.6-48.4-14.5-5.9-21.5-6.5-29.9-2.5z"/>
+    </symbol>
+    <symbol id="play-icon" viewBox="0 0 980 980">
+      <path d="M456 1.1C399.5 5 342.4 19.3 290 42.7 164.7 98.5 66.5 207.6 24.2 338-22.9 483.2-.1 642.1 85.7 766.7c22 32 50.7 64.5 79.8 90.2 115.8 102.5 271.5 144 423.5 113 147.1-30 273.9-128.1 340.5-263.4 67.3-136.7 67.3-296.6 0-433-23.8-48.1-51.3-86.8-89.5-125.9-48.8-49.9-104-86.9-167.5-112.4C604.5 8 529.2-3.9 456 1.1zm84.5 82.8c91.1 12.4 169 50 233.4 112.6 99.7 97 142.8 236.2 115.6 373-12.9 64.8-40.2 123-82.9 176.5-13 16.3-44.6 47.8-61.3 61.1-61.2 48.8-128.9 77.2-208.8 87.6-20 2.6-74 2.6-94 0-75.3-9.8-140.5-35.8-198-79C118.2 720.7 58.2 563.3 89.2 408c34-170.5 174.4-301.3 347.8-324 27.5-3.6 77.6-3.6 103.5-.1z"/><path d="M378.5 256.3c-11.4 3.8-20.2 11.2-25.1 21.2l-2.9 6v412l3.2 6.7c4 8.4 10.7 15.1 19.3 19.2 5.9 2.8 7.4 3.1 16.5 3.1 8.4 0 10.8-.4 15.4-2.4 5.9-2.7 262-195.6 270.7-204 9-8.6 13.5-21.8 11.5-34-1.4-8.5-5.5-16.5-11.5-22.2-8.9-8.5-265.1-201.4-270.8-203.9-6.5-2.9-20.1-3.7-26.3-1.7zm113.7 148.2c41.4 31.3 83.7 63.3 94 71 10.3 7.7 18.7 14.2 18.7 14.5 0 .3-8.4 6.8-18.7 14.5-10.3 7.7-52.6 39.7-94 71-41.4 31.4-75.7 57.2-76.2 57.3-.7.2-1-51.8-1-142.8 0-91 .3-143 1-142.8.5.1 34.8 25.9 76.2 57.3z"/>
+    </symbol>
+  </svg>
+
+  <header class="main-header main-header--no-js">
+    <div class="main-header__advertising-top">
+      <div class="advertising">
+        <a class="advertising__link" href="#">
+          <p class="advertising__text">
+            Дополнительная выгода
+            <b class="advertising__accent-text">
+              до 1300 руб<br/> и РОЗЫГРЫШ ЧАСОВ!
+            </b>
+          </p>
+        </a>
+      </div>
+    </div>
+
+    <section class="main-header__content">
+      <h2 class="visually-hidden">панель управления</h2>
+      <div class="main-header__top">
+        <div class="main-header__inner-wrapper">
+          <button class="main-header__menu-button" type="button" aria-label="главное меню"></button>
+          <a class="main-header__logo-link" href="#">
+            <picture>
+              <source media="(min-width: 900px)" srcset="assets/images/main_logo_big@1x.png 1x, assets/images/main_logo_big@2x.png 2x">
+              <img class="main-header__logo" src="assets/images/main_logo_small@1x.png" srcset="assets/images/main_logo_small@2x.png 2x" alt="логотип Watch Town" width="123" height="17">
+            </picture>
+          </a>
+          <div class="main-header__cart">
+            <a class="cart " href="#" >
+              <div class="cart__image-wrapper">
+                <svg class="cart__icon" xmlns="http://www.w3.org/2000/svg" width="26" height="21">
+                  <use xlink:href="#cart-icon"></use>
+                </svg>
+                <span class="cart__product-counter">1</span>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="main-header__search">
+          <div class="search">
+            <input class="search__input" type="text" placeholder="Поиск товара или бренда..."/>
+            <svg class="search__icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#000000">
+              <use xlink:href="#search-icon"></use>
+            </svg>
+          </div>
+        </div>
+        <div class="main-header__phone-number">
+          <a class="phone-number" href="tel:79857718800">
+            <svg class="phone-number__icon" xmlns="http://www.w3.org/2000/svg" width="23" height="23">
+              <use xlink:href="#phone-icon"></use>
+            </svg>
+            +7 (985) 771 88 00
+          </a>
+        </div>
+        <a href="#" class="main-header__feedback button-primary">Перезвоните мне</a>
+      </div>
+
+      <div class="main-header__bottom">
+        <div class="main-header__navigation">
+          <nav class="site-navigation">
+            <ul class="site-navigation__list">
+              <li class="site-navigation__item">
+                <a href="#" class="site-navigation__link">
+                  <span class="site-navigation__text site-navigation__text--sail">Распродажа</span>
+                </a>
+              </li>
+              <li class="site-navigation__item">
+                <a href="#" class="site-navigation__link">
+                  <span class="site-navigation__text">Бренды</span>
+                </a>
+              </li>
+              <li class="site-navigation__item">
+                <a href="#" class="site-navigation__link">
+                  <span class="site-navigation__text">Мужские часы</span>
+                </a>
+              </li>
+              <li class="site-navigation__item">
+                <a href="#" class="site-navigation__link">
+                  <span class="site-navigation__text">Женские часы</span>
+                </a>
+              </li>
+              <li class="site-navigation__item">
+                <a href="#" class="site-navigation__link">
+                  <span class="site-navigation__text">Связаться с нами</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="main-header__user-section">
+          <div class="user-section">
+            <div class="user-section__login">
+              <a class="authorization authorization--logged-in" href="#" aria-label="личный кабинет">
+                <svg class="authorization__icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22">
+                  <use xlink:href="#authorization-icon"></use>
+                </svg>
+                <p class="authorization__text">Личный кабинет</p>
+              </a>
+            </div>
+            <div class="user-section__cart">
+              <a class="cart" href="#">
+                <div class="cart__image-wrapper">
+                  <svg class="cart__icon" xmlns="http://www.w3.org/2000/svg" width="26" height="21">
+                    <use xlink:href="#cart-icon"></use>
+                  </svg>
+                  <span class="cart__product-counter">1</span>
+                </div>
+                <div class="cart__content-wrapper">
+                  <p class="cart__text">Корзина</p>
+                  <p class="cart__overall-price">22 000 руб.</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="main-header__language-select">
+          <ul class="language-select">
+            <li class="language-select__item">
+              <button class="language-select__picker language-select__picker--russian" type="button" aria-label="select russian language"></button>
+              <img class="language-select__icon" src="assets/images/language_ru_icon.png" alt="изображение флага России">
+            </li>
+            <li class="language-select__item">
+              <button class="language-select__picker language-select__picker--english" type="button" aria-label="select english language"></button>
+              <img class="language-select__icon" src="assets/images/language_brit_icon.png" alt="изображение флага Великобритании">
+            </li>
+            <li class="language-select__item">
+              <button class="language-select__picker language-select__picker--chinese" type="button" aria-label="select chinese language"></button>
+              <img class="language-select__icon" src="assets/images/language_china_icon.png" alt="изображение флага Китая">
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="main-header__advertising-bottom">
+        <div class="advertising advertising--tall">
+          <svg class="advertising__icon" xmlns="http://www.w3.org/2000/svg" width="32" height="26">
+            <use xlink:href="#truck-icon"></use>
+          </svg>
+          <a class="advertising__link" href="#">
+            <p class="advertising__text">
+              <b class="advertising__accent-text">Бесплатная доставка по всей России</b>
+            </p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </header>
+
+  <main class="main-content">
+    <section class="main-content__breadcrumbs">
+      <h2 class="visually-hidden">навгационная цепочка</h2>
+      <ul class="breadcrumbs">
+        <li class="breadcrumbs__item">
+          <a href="#" class="breadcrumbs__link">Главная</a>
+        </li>
+        <li class="breadcrumbs__item">
+          <a href="#" class="breadcrumbs__link">Каталог часов</a>
+        </li>
+        <li class="breadcrumbs__item">
+          <a href="#" class="breadcrumbs__link">Emporio Armani</a>
+        </li>
+        <li class="breadcrumbs__item">
+          <a class="breadcrumbs__link breadcrumbs__link--active">Часы Emporio Armani Ceramika AR1926</a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="main-content__product-overview">
+      <h2 class="visually-hidden">основная информация о товаре</h2>
+      <div class="main-content__product-view">
+        <section class="product-view">
+          <h3 class="visually-hidden">внешний вид товара</h3>
+          <div class="product-view__slider-navigation">
+            <button class="product-view__button-previous">
+              <svg class="product-view__icon-previous" xmlns="http://www.w3.org/2000/svg" width="22" height="22">
+                <use xlink:href="#slider-arrow-icon"></use>
+              </svg>
+            </button>
+            <div class="product-view__media-list">
+              <ul class="media-list">
+                <li class="media-list__item">
+                  <img
+                    class="media-list__image"
+                    src="assets/images/product_image_preview@1x.jpg"
+                    srcset="assets/images/product_image_preview@2x.jpg 2x"
+                    alt="изображение товара: часы emporio armani ceramika ar1926"
+                    width="80"
+                    height="82"
+                  >
+                </li>
+                <li class="media-list__item">
+                  <img
+                    class="media-list__image"
+                    src="assets/images/product_image_preview@1x.jpg"
+                    srcset="assets/images/product_image_preview@2x.jpg 2x"
+                    alt="изображение товара: часы emporio armani ceramika ar1926"
+                    width="80"
+                    height="82"
+                  >
+                </li>
+                <li class="media-list__item media-list__item--view">
+                  <img
+                    class="media-list__image media-list__image--placeholder"
+                    src="assets/images/product_image_preview_2@1x.jpg"
+                    srcset="assets/images/product_image_preview_2@2x.jpg 2x"
+                    alt="изображение товара: часы emporio armani ceramika ar1926"
+                  >
+                  <button class="media-list__view-around-button">
+                    <svg class="media-list__view-around-icon" xmlns="http://www.w3.org/2000/svg" width="41" height="23">
+                      <use xlink:href="#view-around-icon"></use>
+                    </svg>
+                  </button>
+                </li>
+                <li class="media-list__item media-list__item--video">
+                  <img
+                    class="media-list__image media-list__image--placeholder"
+                    src="assets/images/product_image_preview_2@1x.jpg"
+                    srcset="assets/images/product_image_preview_2@2x.jpg 2x"
+                    alt="изображение товара: часы emporio armani ceramika ar1926"
+                  >
+                  <button class="media-list__play-button">
+                    <svg class="media-list__play-icon" xmlns="http://www.w3.org/2000/svg" width="29" height="29">
+                      <use xlink:href="#play-icon"></use>
+                    </svg>
+                  </button>
+                </li>
+              </ul>
+            </div>
+            <button class="product-view__button-next">
+              <svg class="product-view__icon-next" xmlns="http://www.w3.org/2000/svg" width="22" height="22">
+                <use xlink:href="#slider-arrow-icon"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="product-view__selected-media">
+            <picture>
+              <source media="(min-width: 600px)" srcset="assets/images/product_image_desktop@1x.jpg 1x, assets/images/product_image_desktop@2x.jpg 2x">
+              <img
+                class="product-view__image"
+                src="assets/images/product_image_mobile@1x.jpg"
+                srcset="assets/images/product_image_mobile@2x.jpg 2x"
+                alt="изображение товара: часы emporio armani ceramica ar1400"
+                height="220"
+              />
+            </picture>
+          </div>
+        </section>
+      </div>
+
+      <div class="main-content__purchase-section">
+        <section class="purchase-section">
+          <h3 class="visually-hidden">секция покупки товара</h3>
+          <div class="purchase-section__basic-info">
+            <div class="basic-info">
+
+              <div class="basic-info__top-wrapper">
+                <h1 class="basic-info__title">Часы Emporio Armani Ceramica AR1400</h1>
+                <div class="basic-info__dealer">
+                  <img
+                    class="basic-info__dealer-logo"
+                    src="assets/images/armani_logo@1x.png"
+                    srcset="assets/images/armani_logo@2x.png 2x"
+                    alt="логотип Emporio Armani"
+                  >
+                  <p class="basic-info__dealer-text">official dealer</p>
+                </div>
+                <div class="basic-info__share">
+                  <button class="basic-info__share-button">
+                    <svg class="basic-info__share-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" >
+                      <use xlink:href="#share-icon"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              <div class="basic-info__bottom-wrapper">
+                <div class="basic-info__additional-data">
+                  <p class="basic-info__article">Артикул: AR1926</p>
+                  <p class="basic-info__manufacturer">
+                    <span class="basic-info__manufacturer-text">Бренд: </span>
+                    <span class="basic-info__manufacturer-brand">Emporio Armani</span>
+                  </p>
+                </div>
+
+                <div class="basic-info__price-container">
+                  <p class="basic-info__price-row">
+                    <span class="basic-info__previous-price">18300 руб.</span>
+                    <span class="basic-info__actual-price">6990 руб.</span>
+                    <span class="basic-info__discount-value">-50%</span>
+                    <span class="basic-info__available-status">В наличии более 3 шт.</span>
+                  </p>
+                  <p class="basic-info__bonus">Можно применить Cashback</p>
+                  <p class="basic-info__question">Нашли дешевле?</p>
+                </div>
+
+                <div class="basic-info__rating">
+                  <div class="rating">
+                    <div class="rating__stars">
+                      <div class="stars-rating" style="--rating-value: 100%">
+                        <div class="stars-rating__mask">
+                          <span class="stars-rating__mask-item"></span>
+                          <span class="stars-rating__mask-item"></span>
+                          <span class="stars-rating__mask-item"></span>
+                          <span class="stars-rating__mask-item"></span>
+                          <span class="stars-rating__mask-item"></span>
+                        </div>
+                        <div class="stars-rating__list">
+                          <label class="stars-rating__item">
+                            <input class="stars-rating__input visually-hidden" type="radio" value="1">
+                          </label>
+                          <label class="stars-rating__item">
+                            <input class="stars-rating__input visually-hidden" type="radio" value="2">
+                          </label>
+                          <label class="stars-rating__item">
+                            <input class="stars-rating__input visually-hidden" type="radio" value="3">
+                          </label>
+                          <label class="stars-rating__item">
+                            <input class="stars-rating__input visually-hidden" type="radio" value="4">
+                          </label>
+                          <label class="stars-rating__item">
+                            <input class="stars-rating__input visually-hidden" type="radio" value="5">
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <p class="rating__rates-count">
+                      10 оценок пользователей
+                    </p>
+                    <p class="rating__average-value">
+                      (средний рейтинг 5 из 5)
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="purchase-section__buy">
+            <p class="purchase-section__delivery">
+              <span class="purchase-section__delivery-text">
+                Закажите в течениe
+              </span>
+              <span class="purchase-section__delivery-time">
+                1 час : 21 мин.
+              </span>
+              <span class="purchase-section__gratis-delivery">
+                Бесплатно доставим 11.08.2020
+              </span>
+            </p>
+            <div class="purchase-section__controls-container">
+              <button class="purchase-section__cart-add button-primary">
+                <span class="purchase-section__cart-add-text">Добавить в корзину</span>
+                <svg class="purchase-section__cart-add-icon" xmlns="http://www.w3.org/2000/svg" width="26" height="21">
+                  <use xlink:href="#cart-icon"></use>
+                </svg>
+              </button>
+              <a href="#" class="purchase-section__one-click-buy button-secondary">Купить в 1 клик</a>
+            </div>
+            <p class="purchase-section__special-offer">
+              Расскажите о своей покупке и получите<br>
+              до 1300 рублей в виде кэшбэка и участвуйте в ежемесячном разыгрыше часов!
+            </p>
+          </div>
+
+        </section>
+      </div>
+    </section>
+
+    <section class="main-content__details">
+      <h2 class="visually-hidden">подробности о товаре о доставке</h2>
+      <div class="details">
+        <div class="details__equipment js-toggle-container">
+          <section class="equipment">
+            <div class="equipment__header">
+              <header class="toggle-header">
+                <h3 class="toggle-header__title">комплект поставки</h3>
+                <button class="toggle-header__button js-toggle-controller toggle-header__button--opened"></button>
+              </header>
+            </div>
+            <div class="equipment__content js-toggle-target">
+              <p class="equipment__text">Эти часы поставляются вместе с:</p>
+              <ul class="equipment__list">
+                <li class="equipment__item">
+                  Оригинальной демонстрационной коробочкой Emporio Armani
+                </li>
+                <li class="equipment__item">
+                  Оригинальной гарантийной книжкой Emporio Armani
+                </li>
+                <li class="equipment__item">
+                  Руководством по эксплуатации
+                </li>
+                <li class="equipment__item">
+                  Оригинальным сертификатом подлинности Emporio Armani
+                </li>
+              </ul>
+            </div>
+          </section>
+        </div>
+        <div class="details__characteristics">
+          <section class="characteristics js-toggle-container js-desktop-showed">
+            <div class="characteristics__header">
+              <header class="toggle-header toggle-header--button-hiding">
+                <h3 class="toggle-header__title">характеристики часов</h3>
+                <button class="toggle-header__button toggle-header__button--opened js-toggle-controller"></button>
+              </header>
+            </div>
+            <div class="characteristics__content js-toggle-target">
+              <p class="characteristics__note">
+                Если вы не знаете какой размер корпуса выбрать, то прочитайте нашу статью
+                <a href="#" class="characteristics__article-link">
+                  "Как определить размер корпуса часов"
+                </a>
+              </p>
+              <table class="characteristics__list">
+                <caption class="visually-hidden">характеристики часов Emporio Armani AR1926</caption>
+                <tr class="characteristics__item">
+                  <th class="characteristics__property">
+                    <span class="characteristics__text-wrapper">Пол</span>
+                  </th>
+                  <td class="characteristics__value">
+                    <span class="characteristics__text-wrapper">женские</span>
+                  </td>
+                </tr>
+                <tr class="characteristics__item">
+                  <th class="characteristics__property">
+                    <span class="characteristics__text-wrapper">Бренд</span>
+                  </th>
+                  <td class="characteristics__value">
+                    <span class="characteristics__text-wrapper">Emporio Armani</span>
+                  </td>
+                </tr>
+                <tr class="characteristics__item">
+                  <th class="characteristics__property">
+                    <span class="characteristics__text-wrapper">Серия</span>
+                  </th>
+                  <td class="characteristics__value">
+                    <span class="characteristics__text-wrapper">Gianni</span>
+                  </td>
+                </tr>
+                <tr class="characteristics__item">
+                  <th class="characteristics__property">
+                    <span class="characteristics__text-wrapper">Год</span>
+                  </th>
+                  <td class="characteristics__value">
+                    <span class="characteristics__text-wrapper">2020</span>
+                  </td>
+                </tr>
+                <tr class="characteristics__item">
+                  <th class="characteristics__property">
+                    <span class="characteristics__text-wrapper">Тип</span>
+                  </th>
+                  <td class="characteristics__value">
+                    <span class="characteristics__text-wrapper">кварцевые</span>
+                  </td>
+                </tr>
+                <tr class="characteristics__item">
+                  <th class="characteristics__property">
+                    <span class="characteristics__text-wrapper">Стекло</span>
+                  </th>
+                  <td class="characteristics__value">
+                    <span class="characteristics__text-wrapper">минеральное</span>
+                  </td>
+                </tr>
+                <tr class="characteristics__item">
+                  <th class="characteristics__property">
+                    <span class="characteristics__text-wrapper">Корпус</span>
+                  </th>
+                  <td class="characteristics__value">
+                    <span class="characteristics__text-wrapper">нержавеющая сталь, PVD покрытие</span>
+                  </td>
+                </tr>
+                <tr class="characteristics__item">
+                  <th class="characteristics__property">
+                    <span class="characteristics__text-wrapper">Ремешок/браслет</span>
+                  </th>
+                  <td class="characteristics__value">
+                  <span class="characteristics__text-wrapper">нержавеющая сталь, PVD покрытие</span>
+                  </td>
+                </tr>
+                <tr class="characteristics__item">
+                  <th class="characteristics__property">
+                    <span class="characteristics__text-wrapper">Водонепроницаемость</span>
+                  </th>
+                  <td class="characteristics__value">
+                    <span class="characteristics__text-wrapper">WR3O (3 атм)</span>
+                  </td>
+                </tr>
+                <tr class="characteristics__item">
+                  <th class="characteristics__property">
+                    <span class="characteristics__text-wrapper">Размер</span>
+                  </th>
+                  <td class="characteristics__value">
+                    <span class="characteristics__text-wrapper">32 мм</span>
+                  </td>
+                </tr>
+                <tr class="characteristics__item">
+                  <th class="characteristics__property">
+                    <span class="characteristics__text-wrapper">Цвет циферблата</span>
+                  </th>
+                  <td class="characteristics__value">
+                    <span class="characteristics__text-wrapper">серебристый, белый</span>
+                  </td>
+                </tr>
+                <tr class="characteristics__item">
+                  <th class="characteristics__property">
+                    <span class="characteristics__text-wrapper">Цвет корпуса</span>
+                  </th>
+                  <td class="characteristics__value">
+                    <span class="characteristics__text-wrapper">розовый, золотистый, серебристый</span>
+                  </td>
+                </tr>
+                <tr class="characteristics__item">
+                  <th class="characteristics__property">
+                    <span class="characteristics__text-wrapper">Цвет ремешка</span>
+                  </th>
+                  <td class="characteristics__value">
+                    <span class="characteristics__text-wrapper">розовый, золотистый, серебристый</span>
+                  </td>
+                </tr>
+                <tr class="characteristics__item">
+                  <th class="characteristics__property">
+                    <span class="characteristics__text-wrapper">Форма циферблата</span>
+                  </th>
+                  <td class="characteristics__value">
+                    <span class="characteristics__text-wrapper">круг</span>
+                  </td>
+                </tr>
+                <tr class="characteristics__item">
+                  <th class="characteristics__property">
+                    <span class="characteristics__text-wrapper">Тип маркировки на циферблате</span>
+                  </th>
+                  <td class="characteristics__value">
+                    <span class="characteristics__text-wrapper">римские</span>
+                  </td>
+                </tr>
+                <tr class="characteristics__item">
+                  <th class="characteristics__property">
+                    <span class="characteristics__text-wrapper">Толщина корпуса</span>
+                  </th>
+                  <td class="characteristics__value">
+                    <span class="characteristics__text-wrapper">8,6 мм</span>
+                  </td>
+                </tr>
+                <tr class="characteristics__item">
+                  <th class="characteristics__property">
+                    <span class="characteristics__text-wrapper">Вес часов</span>
+                  </th>
+                  <td class="characteristics__value">
+                    <span class="characteristics__text-wrapper">73 г</span>
+                  </td>
+                </tr>
+                <tr class="characteristics__item">
+                  <th class="characteristics__property">
+                    <span class="characteristics__text-wrapper">Ширина ремешка</span>
+                  </th>
+                  <td class="characteristics__value">
+                    <span class="characteristics__text-wrapper">14 мм</span>
+                  </td>
+                </tr>
+                <tr class="characteristics__item">
+                  <th class="characteristics__property">
+                    <span class="characteristics__text-wrapper">Страна</span>
+                  </th>
+                  <td class="characteristics__value">
+                    <span class="characteristics__text-wrapper">Германия</span>
+                  </td>
+                </tr>
+                <tr class="characteristics__item">
+                  <th class="characteristics__property">
+                    <span class="characteristics__text-wrapper">Страна производства механизма</span>
+                  </th>
+                  <td class="characteristics__value">
+                    <span class="characteristics__text-wrapper">Япония</span>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </section>
+        </div>
+        <div class="details__description">
+          <section class="description">
+            <div class="description__header">
+              <header class="toggle-header">
+                <h3 class="toggle-header__title">описание часов</h3>
+                <button class="toggle-header__button"></button>
+              </header>
+            </div>
+          </section>
+        </div>
+        <div class="details__brand-info">
+          <section class="brand-info">
+            <div class="brand-info__header">
+              <header class="toggle-header">
+                <h3 class="toggle-header__title">о бренде Emporio Armani</h3>
+                <button class="toggle-header__button"></button>
+              </header>
+            </div>
+          </section>
+        </div>
+        <div class="details__reviews">
+          <section class="reviews js-toggle-container">
+            <div class="reviews__header">
+              <header class="toggle-header">
+                <h3 class="toggle-header__title">отзывы и обзоры о модели</h3>
+                <button class="toggle-header__button toggle-header__button--opened js-toggle-controller"></button>
+              </header>
+            </div>
+            <div class="reviews__content js-toggle-target">
+              <div class="reviews__overall-rating">
+                <div class="rating">
+                  <div class="rating__stars">
+                    <div class="stars-rating" style="--rating-value: 100%">
+                      <div class="stars-rating__mask">
+                        <span class="stars-rating__mask-item"></span>
+                        <span class="stars-rating__mask-item"></span>
+                        <span class="stars-rating__mask-item"></span>
+                        <span class="stars-rating__mask-item"></span>
+                        <span class="stars-rating__mask-item"></span>
+                      </div>
+                      <div class="stars-rating__list">
+                        <label class="stars-rating__item">
+                          <input class="stars-rating__input visually-hidden" type="radio" value="1">
+                        </label>
+                        <label class="stars-rating__item">
+                          <input class="stars-rating__input visually-hidden" type="radio" value="2">
+                        </label>
+                        <label class="stars-rating__item">
+                          <input class="stars-rating__input visually-hidden" type="radio" value="3">
+                        </label>
+                        <label class="stars-rating__item">
+                          <input class="stars-rating__input visually-hidden" type="radio" value="4">
+                        </label>
+                        <label class="stars-rating__item">
+                          <input class="stars-rating__input visually-hidden" type="radio" value="5">
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="rating__rates-count">
+                    10 оценок пользователей
+                  </p>
+                  <p class="rating__average-value">
+                    (средний рейтинг 5 из 5)
+                  </p>
+                </div>
+              </div>
+              <ul class="reviews__list">
+                <li class="reviews__item">
+                  <div class="review">
+                    <header class="review__info">
+                      <p class="review__username">Карина</p>
+                      <time class="review__date" datetime="2020-03-12">12.03.2020</time>
+                      <div class="review__rating">
+                        <div class="review__rating-stars">
+                          <div class="stars-rating stars-rating--comments" style="--rating-value: 100%">
+                            <div class="stars-rating__mask">
+                              <span class="stars-rating__mask-item"></span>
+                              <span class="stars-rating__mask-item"></span>
+                              <span class="stars-rating__mask-item"></span>
+                              <span class="stars-rating__mask-item"></span>
+                              <span class="stars-rating__mask-item"></span>
+                            </div>
+                            <div class="stars-rating__list">
+                              <label class="stars-rating__item">
+                                <input class="stars-rating__input visually-hidden" type="radio" value="1">
+                              </label>
+                              <label class="stars-rating__item">
+                                <input class="stars-rating__input visually-hidden" type="radio" value="2">
+                              </label>
+                              <label class="stars-rating__item">
+                                <input class="stars-rating__input visually-hidden" type="radio" value="3">
+                              </label>
+                              <label class="stars-rating__item">
+                                <input class="stars-rating__input visually-hidden" type="radio" value="4">
+                              </label>
+                              <label class="stars-rating__item">
+                                <input class="stars-rating__input visually-hidden" type="radio" value="5">
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <span class="review__rating-numbers">5/5</span>
+                      </div>
+                    </header>
+                    <p class="review__content">
+                      Благодарна вам за армани AR1926. Больше месяца они сомной и все хорошо. Метал необлазит. Стекло и крышка не царапаються. Камешки невываливаются. Доставка была СДЭК – то же быстро. Хорошо что я еще попала на скидки
+                    </p>
+                  </div>
+                </li>
+                <li class="reviews__item">
+                  <div class="review">
+                    <header class="review__info">
+                      <p class="review__username">Нина</p>
+                      <time class="review__date" datetime="2020-03-12">12.03.2020</time>
+                      <div class="review__rating">
+                        <div class="review__rating-stars">
+                          <div class="stars-rating stars-rating--comments" style="--rating-value: 100%">
+                            <div class="stars-rating__mask">
+                              <span class="stars-rating__mask-item"></span>
+                              <span class="stars-rating__mask-item"></span>
+                              <span class="stars-rating__mask-item"></span>
+                              <span class="stars-rating__mask-item"></span>
+                              <span class="stars-rating__mask-item"></span>
+                            </div>
+                            <div class="stars-rating__list">
+                              <label class="stars-rating__item">
+                                <input class="stars-rating__input visually-hidden" type="radio" value="1">
+                              </label>
+                              <label class="stars-rating__item">
+                                <input class="stars-rating__input visually-hidden" type="radio" value="2">
+                              </label>
+                              <label class="stars-rating__item">
+                                <input class="stars-rating__input visually-hidden" type="radio" value="3">
+                              </label>
+                              <label class="stars-rating__item">
+                                <input class="stars-rating__input visually-hidden" type="radio" value="4">
+                              </label>
+                              <label class="stars-rating__item">
+                                <input class="stars-rating__input visually-hidden" type="radio" value="5">
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+
+                        <span class="review__rating-numbers">5/5</span>
+                      </div>
+                    </header>
+                    <p class="review__content">
+                      <span class="review__placeholder">(Пользователь добавил оценку)</span>
+                    </p>
+                  </div>
+                </li>
+                <li class="reviews__item">
+                  <div class="review">
+                    <header class="review__info">
+                      <p class="review__username">Карина</p>
+                      <time class="review__date" datetime="2020-03-12">12.03.2020</time>
+                      <div class="review__rating">
+                        <div class="review__rating-stars">
+                          <div class="stars-rating stars-rating--comments" style="--rating-value: 100%">
+                            <div class="stars-rating__mask">
+                              <span class="stars-rating__mask-item"></span>
+                              <span class="stars-rating__mask-item"></span>
+                              <span class="stars-rating__mask-item"></span>
+                              <span class="stars-rating__mask-item"></span>
+                              <span class="stars-rating__mask-item"></span>
+                            </div>
+                            <div class="stars-rating__list">
+                              <label class="stars-rating__item">
+                                <input class="stars-rating__input visually-hidden" type="radio" value="1">
+                              </label>
+                              <label class="stars-rating__item">
+                                <input class="stars-rating__input visually-hidden" type="radio" value="2">
+                              </label>
+                              <label class="stars-rating__item">
+                                <input class="stars-rating__input visually-hidden" type="radio" value="3">
+                              </label>
+                              <label class="stars-rating__item">
+                                <input class="stars-rating__input visually-hidden" type="radio" value="4">
+                              </label>
+                              <label class="stars-rating__item">
+                                <input class="stars-rating__input visually-hidden" type="radio" value="5">
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <span class="review__rating-numbers">5/5</span>
+                      </div>
+                    </header>
+                    <p class="review__content">
+                      Довольна часами, сделала себе подарок к дню рождения
+                    </p>
+                  </div>
+                </li>
+              </ul>
+              <button class="reviews__show-more">Показать еще</button>
+              <div class="reviews__feedback">
+                <a href="#" class="reviews__rate-product button-primary">Поставить оценку</a>
+                <a href="#" class="reviews__write-review button-secondary">Написать отзыв</a>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="details__delivery-and-return">
+          <section class="delivery-and-return">
+            <div class="delivery-and-return__header">
+              <header class="toggle-header">
+                <h3 class="toggle-header__title">доставка и возврат</h3>
+                <button class="toggle-header__button"></button>
+              </header>
+            </div>
+          </section>
+        </div>
+
+      </div>
+    </section>
+
+    <div class="main-content__viewed-before">
+      <section class="viewed-before">
+        <header class="viewed-before__header">
+          <h2 class="viewed-before__title">Вы смотрели</h2>
+          <div class="viewed-before__clear">
+            <span class="viewed-before__clear-text">очистить список</span>
+            <button class="viewed-before__clear-button" type="button" aria-label="очистить список"></button>
+          </div>
+        </header>
+        <div class="viewed-before__products">
+          <div class="product-list">
+            <ul class="product-list__content">
+              <li class="product-list__item">
+                <picture>
+                  <source media="(min-width: 600px)" srcset="assets/images/list_product_desktop@1x.jpg 1x, assets/images/list_product_desktop@2x.jpg 2x">
+                  <img class="product-list__image" src="assets/images/list_product_mobile@1x.jpg" srcset="assets/images/list_product_mobile@2x.jpg 2x" alt="изображение часов: Emporio Armani" width="100" height="120">
+                </picture>
+                <h3 class="product-list__title">Emporio Armani</h3>
+                <p class="product-list__article">AR1926</p>
+              </li>
+              <li class="product-list__item">
+                <picture>
+                  <source media="(min-width: 600px)" srcset="assets/images/list_product_desktop@1x.jpg 1x, assets/images/list_product_desktop@2x.jpg 2x">
+                  <img class="product-list__image" src="assets/images/list_product_mobile@1x.jpg" srcset="assets/images/list_product_mobile@2x.jpg 2x" alt="изображение часов: Emporio Armani" width="100" height="120">
+                </picture>
+                <h3 class="product-list__title">Emporio Armani</h3>
+                <p class="product-list__article">AR1926</p>
+              </li>
+              <li class="product-list__item">
+                <picture>
+                  <source media="(min-width: 600px)" srcset="assets/images/list_product_desktop@1x.jpg 1x, assets/images/list_product_desktop@2x.jpg 2x">
+                  <img class="product-list__image" src="assets/images/list_product_mobile@1x.jpg" srcset="assets/images/list_product_mobile@2x.jpg 2x" alt="изображение часов: Emporio Armani" width="100" height="120">
+                </picture>
+                <h3 class="product-list__title">Emporio Armani</h3>
+                <p class="product-list__article">AR1926</p>
+              </li>
+              <li class="product-list__item">
+                <picture>
+                  <source media="(min-width: 600px)" srcset="assets/images/list_product_desktop@1x.jpg 1x, assets/images/list_product_desktop@2x.jpg 2x">
+                  <img class="product-list__image" src="assets/images/list_product_mobile@1x.jpg" srcset="assets/images/list_product_mobile@2x.jpg 2x" alt="изображение часов: Emporio Armani" width="100" height="120">
+                </picture>
+                <h3 class="product-list__title">Emporio Armani</h3>
+                <p class="product-list__article">AR1926</p>
+              </li>
+              <li class="product-list__item">
+                <picture>
+                  <source media="(min-width: 600px)" srcset="assets/images/list_product_desktop@1x.jpg 1x, assets/images/list_product_desktop@2x.jpg 2x">
+                  <img class="product-list__image" src="assets/images/list_product_mobile@1x.jpg" srcset="assets/images/list_product_mobile@2x.jpg 2x" alt="изображение часов: Emporio Armani" width="100" height="120">
+                </picture>
+                <h3 class="product-list__title">Emporio Armani</h3>
+                <p class="product-list__article">AR1926</p>
+              </li>
+              <li class="product-list__item">
+                <picture>
+                  <source media="(min-width: 600px)" srcset="assets/images/list_product_desktop@1x.jpg 1x, assets/images/list_product_desktop@2x.jpg 2x">
+                  <img class="product-list__image" src="assets/images/list_product_mobile@1x.jpg" srcset="assets/images/list_product_mobile@2x.jpg 2x" alt="изображение часов: Emporio Armani" width="100" height="120">
+                </picture>
+                <h3 class="product-list__title">Emporio Armani</h3>
+                <p class="product-list__article">AR1926</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+
+  </main>
+
+  <footer class="main-footer">
+    <div class="main-footer__menu">
+      <section class="footer-menu">
+        <h2 class="visually-hidden">расширенное меню сайта</h2>
+        <section class="footer-menu__contacts js-hide js-desktop-showed js-toggle-container">
+          <div class="toggle-header toggle-header--button-hiding toggle-header--footer">
+            <h3 class="toggle-header__title">Связаться с нами</h3>
+            <button class="toggle-header__button js-toggle-controller"></button>
+          </div>
+          <div class="footer-menu__contacts-wrapper js-toggle-target js-toggle-target--desktop-showed">
+            <div class="contacts">
+              <ul class="contacts__list">
+                <li class="contacts__item">
+                  <a class="phone-number phone-number--footer" href="tel:79857718800">
+                    <svg class="phone-number__icon" xmlns="http://www.w3.org/2000/svg" width="23" height="23">
+                      <use xlink:href="#phone-icon"></use>
+                    </svg>
+                    +7 (985) 771 88 00
+                  </a>
+                </li>
+                <li class="contacts__item contacts__item--phone">
+                  <a class="phone-number phone-number--footer" href="tel:79857718800">
+                    <svg class="phone-number__icon" xmlns="http://www.w3.org/2000/svg" width="23" height="23">
+                      <use xlink:href="#phone-icon"></use>
+                    </svg>
+                    +7 (985) 771 88 00
+                  </a>
+                </li>
+                <li class="contacts__item">
+                  <a class="contacts__link contacts__whatsapp" href="https://wa.me/79857718800">WhatsApp</a>
+                </li>
+                <li class="contacts__item">
+                  <a class="contacts__link contacts__telegram" href="#">Telegram</a>
+                </li>
+                <li class="contacts__item">
+                  <a class="contacts__link contacts__viber" href="viber://chat?number=79857718800">Viber</a>
+                </li>
+              </ul>
+              <div class="contacts__controls">
+                <a href="#" class="contacts__order-call button-primary">Заказать звонок</a>
+                <a href="#" class="contacts__ask-question button-secondary">Задать вопрос</a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="footer-menu__info js-hide js-toggle-container js-desktop-showed">
+          <div class="toggle-header toggle-header--button-hiding toggle-header--footer">
+            <h3 class="toggle-header__title">Информация</h3>
+            <button class="toggle-header__button js-toggle-controller"></button>
+          </div>
+          <ul class="footer-menu__list js-toggle-target">
+            <li class="footer-menu__item">
+              <a class="footer-menu__link" href="#">Как купить</a>
+            </li>
+            <li class="footer-menu__item">
+              <a class="footer-menu__link" href="#">Доставка и оплата</a>
+            </li>
+            <li class="footer-menu__item">
+              <a class="footer-menu__link" href="#">Возврат и обмен</a>
+            </li>
+            <li class="footer-menu__item">
+              <a class="footer-menu__link" href="#">О компании</a>
+            </li>
+            <li class="footer-menu__item">
+              <a class="footer-menu__link" href="#">Гарантия</a>
+            </li>
+            <li class="footer-menu__item">
+              <a class="footer-menu__link" href="#">Гарантия лучшей цены</a>
+            </li>
+            <li class="footer-menu__item">
+              <a class="footer-menu__link" href="#">Контакты</a>
+            </li>
+            <li class="footer-menu__item">
+              <a class="footer-menu__link" href="#">Новости</a>
+            </li>
+            <li class="footer-menu__item">
+              <a class="footer-menu__link" href="#">Отзывы</a>
+            </li>
+            <li class="footer-menu__item">
+              <a class="footer-menu__link" href="#">Карта сайта</a>
+            </li>
+            <li class="footer-menu__item">
+              <a class="footer-menu__link" href="#">Официальная информация</a>
+            </li>
+            <li class="footer-menu__item">
+              <a class="footer-menu__link" href="#">Политика</a>
+            </li>
+            <li class="footer-menu__item">
+              <a class="footer-menu__link" href="#">Оптовым клиентам</a>
+            </li>
+          </ul>
+        </section>
+        <section class="footer-menu__navigation js-hide js-desktop-showed js-toggle-container">
+          <div class="toggle-header toggle-header--button-hiding toggle-header--footer">
+            <h3 class="toggle-header__title">Разделы сайта</h3>
+            <button class="toggle-header__button js-toggle-controller"></button>
+          </div>
+          <ul class="footer-menu__list js-toggle-target">
+            <li class="footer-menu__item">
+              <a class="footer-menu__link" href="#">Fashion часы</a>
+            </li>
+            <li class="footer-menu__item">
+              <a class="footer-menu__link" href="#">Мужские часы</a>
+            </li>
+            <li class="footer-menu__item">
+              <a class="footer-menu__link" href="#">Женские часы</a>
+            </li>
+            <li class="footer-menu__item">
+              <a class="footer-menu__link" href="#">Электронные часы</a>
+            </li>
+            <li class="footer-menu__item">
+              <a class="footer-menu__link" href="#">Керамические часы</a>
+            </li>
+            <li class="footer-menu__item">
+              <a class="footer-menu__link" href="#">Подарочная карта</a>
+            </li>
+            <li class="footer-menu__item">
+              <a class="footer-menu__link" href="#">Корпоративные подарки</a>
+            </li>
+            <li class="footer-menu__item">
+              <a class="footer-menu__link" href="#">Дарим до 1300 руб. и ЧАСЫ!</a>
+            </li>
+            <li class="footer-menu__item">
+              <a class="footer-menu__link" href="#">Остерегайтесь мошенников!</a>
+            </li>
+          </ul>
+        </section>
+        <section class="footer-menu__additional-info js-hide js-desktop-showed js-toggle-container">
+          <div class="toggle-header toggle-header--button-hiding toggle-header--footer">
+            <h3 class="toggle-header__title">Интересно почитать</h3>
+            <button class="toggle-header__button js-toggle-controller"></button>
+          </div>
+          <ul class="footer-menu__list js-toggle-target">
+            <li class="footer-menu__item">
+              <a class="footer-menu__link" href="#">Водозащита</a>
+            </li>
+            <li class="footer-menu__item">
+              <a class="footer-menu__link" href="#">Запотевание стекла</a>
+            </li>
+            <li class="footer-menu__item">
+              <a class="footer-menu__link" href="#">Как определить размер часов</a>
+            </li>
+            <li class="footer-menu__item">
+              <a class="footer-menu__link" href="#">Обзоры и описания часов</a>
+            </li>
+          </ul>
+        </section>
+      </section>
+    </div>
+    <div class="main-footer__top-wrapper">
+      <div class="main-footer__pay">
+        <section class="pay">
+          <h2 class="pay__title">Мы принимаем к оплате</h2>
+          <ul class="pay__list">
+            <li class="pay__item">
+              <picture>
+                <source media="(min-width: 1139px)" srcset="assets/images/visa_logo_desktop.png">
+                <img class="pay__image pay__image--visa" src="assets/images/visa_logo_mobile.png" alt="логотип Visa" width="34" height="11">
+              </picture>
+            </li>
+            <li class="pay__item">
+              <picture>
+                <source media="(min-width: 1139px)" srcset="assets/images/master_card_logo_desktop.png">
+                <img class="pay__image pay__image--master-card" src="assets/images/master_card_logo_mobile.png" alt="логотип Master Card" width="28" height="16">
+              </picture>
+            </li>
+            <li class="pay__item">
+              <picture>
+                <source media="(min-width: 1139px)" srcset="assets/images/apple_pay_logo_desktop.png">
+                <img class="pay__image pay__image--apple" src="assets/images/apple_pay_logo_mobile.png" alt="логотип Apple Pay" width="32" height="12">
+              </picture>
+            </li>
+            <li class="pay__item">
+              <picture>
+                <source media="(min-width: 1139px)" srcset="assets/images/google_pay_logo_desktop.png">
+                <img class="pay__image pay__image--google" src="assets/images/google_pay_logo_mobile.png" alt="логотип Google Pay" width="32" height="13">
+              </picture>
+            </li>
+            <li class="pay__item">
+              <picture>
+                <source media="(min-width: 1139px)" srcset="assets/images/samsung_pay_logo_desktop.png">
+                <img class="pay__image pay__image--samsung" src="assets/images/samsung_pay_logo_mobile.png" alt="логотип Samsung Pay" width="34" height="15">
+              </picture>
+            </li>
+            <li class="pay__item">
+              <picture>
+                <source media="(min-width: 1139px)" srcset="assets/images/yandex_money_logo_desktop.png">
+                <img class="pay__image pay__image--yandex" src="assets/images/yandex_money_logo_mobile.png" alt="логотип Yandex Money" width="12" height="16">
+              </picture>
+            </li>
+          </ul>
+        </section>
+      </div>
+      <div class="main-footer__social">
+        <section class="social">
+          <h2 class="social__title">Мы в сети</h2>
+          <ul class="social__list">
+            <li class="social__item">
+              <a href="#" class="social__link">
+                <svg class="social__icon" width="20" height="14">
+                  <use xlink:href="#youtube-icon"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link">
+                <svg class="social__icon" width="17" height="17">
+                  <use xlink:href="#instagram-icon"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link">
+                <svg class="social__icon" width="21" height="21">
+                  <use xlink:href="#vk-icon"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link">
+                <svg class="social__icon" width="20" height="17">
+                  <use xlink:href="#facebook-icon"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </div>
+    <div class="main-footer__contacts">
+      <div class="contacts">
+        <h2 class="contacts__title">Связаться с нами</h2>
+        <ul class="contacts__list">
+          <li class="contacts__item contacts__item--phone">
+            <a class="phone-number" href="tel:79857718800">
+              <svg class="phone-number__icon" xmlns="http://www.w3.org/2000/svg" width="23" height="23">
+                <use xlink:href="#phone-icon"></use>
+              </svg>
+              +7 (985) 771 88 00
+            </a>
+          </li>
+          <li class="contacts__item">
+            <a class="contacts__link contacts__telegram" href="#">Telegram</a>
+          </li>
+          <li class="contacts__item">
+            <a class="contacts__link contacts__whatsapp" href="https://wa.me/79857718800">WhatsApp</a>
+          </li>
+          <li class="contacts__item">
+            <a class="contacts__link contacts__viber" href="viber://chat?number=79857718800">Viber</a>
+          </li>
+        </ul>
+        <div class="contacts__controls">
+          <a href="#" class="contacts__order-call button-primary">Заказать звонок</a>
+          <a href="#" class="contacts__ask-question button-secondary">Задать вопрос</a>
+        </div>
+      </div>
+    </div>
+    <div class="main-footer__bottom-wrapper">
+      <div class="main-footer__container">
+
+        <div class="main-footer__web-rating">
+          <section class="web-rating">
+            <h2 class="visually-hidden">рейтинг в поисковых системах</h2>
+            <ul class="web-rating__list">
+              <li class="web-rating__item">
+                <img src="assets/images/yandex_market_logo.png" alt="логотип Яндекса" class="web-rating__company-logo" width="96" height="20">
+                <div class="web-rating__score">
+                  <div class="stars-rating" style="--rating-value: 96%">
+                    <div class="stars-rating__mask stars-rating__mask--web">
+                      <span class="stars-rating__mask-item"></span>
+                      <span class="stars-rating__mask-item"></span>
+                      <span class="stars-rating__mask-item"></span>
+                      <span class="stars-rating__mask-item"></span>
+                      <span class="stars-rating__mask-item"></span>
+                    </div>
+                    <div class="stars-rating__list">
+                      <label class="stars-rating__item">
+                        <input class="stars-rating__input visually-hidden" type="radio" value="1">
+                      </label>
+                      <label class="stars-rating__item">
+                        <input class="stars-rating__input visually-hidden" type="radio" value="2">
+                      </label>
+                      <label class="stars-rating__item">
+                        <input class="stars-rating__input visually-hidden" type="radio" value="3">
+                      </label>
+                      <label class="stars-rating__item">
+                        <input class="stars-rating__input visually-hidden" type="radio" value="4">
+                      </label>
+                      <label class="stars-rating__item">
+                        <input class="stars-rating__input visually-hidden" type="radio" value="5">
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <span class="web-rating__score-text">4.8</span>
+              </li>
+              <li class="web-rating__item">
+                <img src="assets/images/google_logo.png" alt="логотип Гугл" class="web-rating__company-logo" width="65" height="22">
+                <div class="stars-rating" style="--rating-value: 96%">
+                  <div class="stars-rating__mask stars-rating__mask--web">
+                    <span class="stars-rating__mask-item"></span>
+                    <span class="stars-rating__mask-item"></span>
+                    <span class="stars-rating__mask-item"></span>
+                    <span class="stars-rating__mask-item"></span>
+                    <span class="stars-rating__mask-item"></span>
+                  </div>
+                  <div class="stars-rating__list">
+                    <label class="stars-rating__item">
+                      <input class="stars-rating__input visually-hidden" type="radio" value="1">
+                    </label>
+                    <label class="stars-rating__item">
+                      <input class="stars-rating__input visually-hidden" type="radio" value="2">
+                    </label>
+                    <label class="stars-rating__item">
+                      <input class="stars-rating__input visually-hidden" type="radio" value="3">
+                    </label>
+                    <label class="stars-rating__item">
+                      <input class="stars-rating__input visually-hidden" type="radio" value="4">
+                    </label>
+                    <label class="stars-rating__item">
+                      <input class="stars-rating__input visually-hidden" type="radio" value="5">
+                    </label>
+                  </div>
+                </div>
+                <span class="web-rating__score-text">4.8</span>
+              </li>
+            </ul>
+          </section>
+        </div>
+        <div class="main-footer__copyright">
+          <p class="main-footer__copyright-main">© 2011-2020 WatchTown.ru</p>
+          <p class="main-footer__copyright-description">Магазин оригинальных наручных чаосв</p>
+        </div>
+        <div class="main-footer__company">
+          <p class="main-footer__company-data">ООО «КУПИКОМ», ОГРН 1197746670989</p>
+          <p class="main-footer__company-address">115035, г. Москва, ул. Садовническая, д. 72, стр 1, эт. 1, пом. III</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="side-page-controls">
+    <div class="side-page-controls__page-up">
+      <a href="#" class="page-up-button" aria-label="вернуться к началу страницы">
+        <svg class="page-up-button__icon" xmlns="http://www.w3.org/2000/svg" width="15" height="26">
+          <use xlink:href="#page-up-icon"></use>
+        </svg>
+      </a>
+    </div>
+    <div class="side-page-controls__chat">
+      <button class="chat-button" type="button">
+        <svg class="chat-button__icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22">
+          <use xlink:href="#chat-icon"></use>
+        </svg>
+        <span class="chat-button__text">ЧАТ</span>
+      </button>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+
+</body>
+</html>
