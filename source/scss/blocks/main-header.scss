@@ -156,15 +156,19 @@
   }
 
   .main-header__navigation {
+    max-width: 60%;
+
     margin-right: auto;
   }
 
   .main-header__user-section {
+    max-width: 27%;
     margin-right: 10px;
   }
 }
 
 .main-header__language-select {
+  max-width: 10%;
   margin-right: -5px;
 }
 
