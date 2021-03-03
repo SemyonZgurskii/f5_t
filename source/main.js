@@ -25,20 +25,28 @@ menuButtonElement.addEventListener("click", () => {
 const JsToggleModifier = {
   Container: "js-toggle-container",
   Controller: "js-toggle-controller",
+  Hidden: "js-hide",
+  DesktopShowed: "js-desktop-showed"
 }
 
 const buttonModifier = "toggle-header__button--opened";
+let desktopShownElements = [];
 
 function setJsModifierToggle(parentClassName) {
   const parentElement = document.querySelector(`.${parentClassName}`)
   const toggleContainerElements = parentElement.querySelectorAll(`.${JsToggleModifier.Container}`);
+
   toggleContainerElements.forEach((currentElement) => {
     const toggleControllerElement = currentElement.querySelector(`.${JsToggleModifier.Controller}`);
 
-    toggleControllerElement.addEventListener("click", () => {
-      currentElement.classList.toggle("js-hide");
+    if (currentElement.classList.contains(JsToggleModifier.DesktopShowed)) {
+      desktopShownElements.push(currentElement);
+    }
 
-      if (currentElement.classList.contains("js-hide")) {
+    toggleControllerElement.addEventListener("click", () => {
+      currentElement.classList.toggle(JsToggleModifier.Hidden);
+
+      if (currentElement.classList.contains(JsToggleModifier.Hidden)) {
         toggleControllerElement.classList.remove(buttonModifier);
       } else {
         toggleControllerElement.classList.add(buttonModifier);
@@ -46,6 +54,19 @@ function setJsModifierToggle(parentClassName) {
     })
   })
 }
+
+const desktopMediaQuery = window.matchMedia("(min-width: 1139px)");
+
+function onScreenSizeChange(evt) {
+  if (evt.matches) {
+    desktopShownElements.forEach((element) => {
+      element.classList.remove(JsToggleModifier.Hidden);
+    })
+  }
+}
+
+desktopMediaQuery.addListener(onScreenSizeChange);
+onScreenSizeChange(desktopMediaQuery);
 
 setJsModifierToggle("details");
 setJsModifierToggle("footer-menu");
