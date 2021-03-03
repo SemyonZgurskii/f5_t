@@ -55,19 +55,6 @@
   padding-left: 1px;
 }
 
-.reviews__rate-product {
-  color: #ffffff;
-
-  background-color: $elements-color;
-}
-
-.reviews__write-review {
-  color: $elements-color;
-
-  background-color: #ffffff;
-  border: 1px solid $elements-color;
-}
-
 .reviews__rate-product,
 .reviews__write-review {
   width: 47%;
@@ -75,8 +62,7 @@
 
   text-decoration: none;
   text-align: center;
-
-  @include main-font(14px, 20px, 700, normal);
+  font-weight: 700;
 }
 
 @media (min-width: $pretablet-width) {

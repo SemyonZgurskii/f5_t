@@ -208,19 +208,6 @@
     color: #ffffff;
     letter-spacing: 0.025px;
     text-decoration: none;
-
-    @include main-font(14px, 20px, 600, normal);
-
-    background-color: $elements-color;
-
-    &:hover,
-    &:focus {
-      background-color: desaturate($elements-color, 20%);
-    }
-
-    &:active {
-      background-color: desaturate($elements-color, 30%);
-    }
   }
 
   .main-header__bottom {

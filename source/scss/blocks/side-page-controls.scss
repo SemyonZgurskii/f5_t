@@ -1,9 +1,16 @@
 .side-page-controls {
-  position: fixed;
-  right: 0;
-  bottom: 49vh;
+  display: none;
 }
 
-.side-page-controls__page-up {
-  margin-bottom: 17px;
+@media (min-width: $desktop-width) {
+  .side-page-controls {
+    display: block;
+    position: fixed;
+    right: 0;
+    bottom: 49vh;
+  }
+
+  .side-page-controls__page-up {
+    margin-bottom: 17px;
+  }
 }

@@ -9,8 +9,26 @@
   border-bottom-left-radius: 10px;
   border-top-left-radius: 10px;
   box-shadow: 2px 11px 21px 0px rgba(#000000, 0.13);
+
+  &:hover,
+  &:focus {
+    box-shadow: 2px 11px 21px 0px rgba(#000000, 0.33);
+  }
+
+  &:active {
+    box-shadow: 2px 11px 21px 0px rgba(#000000, 0.23);
+  }
 }
 
 .page-up-button__icon {
   fill: $elements-color;
+}
+
+.page-up-button:hover .page-up-button__icon,
+.page-up-button:focus .page-up-button__icon {
+  fill: desaturate($elements-color, 20%);
+}
+
+.page-up-button:active .page-up-button__icon {
+  fill: desaturate($elements-color, 30%);
 }

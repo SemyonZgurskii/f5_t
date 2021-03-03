@@ -1,0 +1,17 @@
+.button-primary {
+  color: #ffffff;
+
+  @include main-font(14px, 20px, 600, normal);
+
+  background-color: $elements-color;
+  border: none;
+
+  &:hover,
+  &:focus {
+    background-color: desaturate($elements-color, 20%);
+  }
+
+  &:active {
+    background-color: desaturate($elements-color, 30%);
+  }
+}

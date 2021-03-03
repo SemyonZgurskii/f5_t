@@ -1,0 +1,21 @@
+.button-secondary {
+  color: $elements-color;
+  text-decoration: none;
+  text-align: center;
+
+  @include main-font(14px, 20px, 700, normal);
+
+  background-color: #ffffff;
+  border: 1px solid $elements-color;
+
+  &:focus,
+  &:hover {
+    color: #ffffff;
+
+    background-color: desaturate($elements-color, 20%);
+  }
+
+  &:active {
+    background-color: darken($elements-color, 10%);
+  }
+}

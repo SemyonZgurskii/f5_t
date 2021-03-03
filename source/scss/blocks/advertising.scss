@@ -11,10 +11,23 @@
   padding: 12px 0;
 }
 
+.advertising__link {
+  color: #ffffff;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+}
+
 .advertising__text {
   margin: 0;
 
-  color: #ffffff;
   text-align: center;
   letter-spacing: 0.02em;
 

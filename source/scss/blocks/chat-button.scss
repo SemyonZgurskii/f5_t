@@ -9,6 +9,15 @@
   border: none;
   border-bottom-left-radius: 8px;
   border-top-left-radius: 8px;
+
+  &:hover,
+  &:focus {
+    background-color: desaturate($elements-color, 20%);
+  }
+
+  &:active {
+    background-color: desaturate($elements-color, 30%);
+  }
 }
 
 .chat-button__icon {

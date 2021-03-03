@@ -10,11 +10,54 @@
 }
 
 .media-list__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 86px;
+  height: 90px;
+  overflow: hidden;
+
   border: 1px solid #bebebe;
 }
 
 .media-list__image {
   display: block;
+  margin-left: 2px;
 }
 
-//TODO: определить содержимое li (кнопка ?). Доделать мультимедиа снизу
+.media-list__item--video > .media-list__image,
+.media-list__item--view > .media-list__image {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin-left: 0;
+}
+
+.media-list__view-around-button,
+.media-list__play-button {
+  position: absolute;
+  content: "";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 52px;
+  height: 52px;
+
+  border: none;
+  background-color: $elements-color;
+  border-radius: 50%;
+
+  &:hover,
+  &:focus {
+    background-color: desaturate($elements-color, 20%);
+  }
+
+  &:active {
+    background-color: desaturate($elements-color, 30%);
+  }
+}
+
+.media-list__view-around-icon,
+.media-list__play-icon {
+  fill: #ffffff;
+}
