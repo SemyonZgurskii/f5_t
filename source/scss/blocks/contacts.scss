@@ -1,0 +1,144 @@
+.contacts {
+  overflow: hidden;
+}
+
+.contacts__title {
+  margin-top: 0;
+  margin-bottom: 17px;
+
+  text-align: center;
+
+  @include main-font(16px, 30px, 700, normal);
+}
+
+.contacts__list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 0;
+  margin-bottom: 17px;
+  margin-right: -16px;
+  padding-left: 0;
+
+  list-style: none;
+}
+
+.contacts__item {
+  margin-right: 22px;
+  margin-bottom: 8px;
+}
+
+.contacts__item--phone {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 20px;
+  margin-right: 15px;
+}
+
+.contacts__link {
+  display: block;
+  padding-left: 39px;
+
+  color: #000000;
+  text-decoration: none;
+
+  background-repeat: no-repeat;
+
+  @include main-font(14px, 30px, 600, normal);
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.contacts__whatsapp {
+  background-image: url("../assets/images/whatsapp_icon.png");
+  background-position: left 3px top -1px;
+  background-size: 27px 27px;
+}
+
+.contacts__telegram {
+  background-image: url("../assets/images/telegram_icon.png");
+  background-position: left 5px top 1px;
+  background-size: 24px 24px;
+}
+
+.contacts__viber {
+  background-image: url("../assets/images/viber_icon.png");
+  background-position: left 3px top 0px;
+  background-size: 26px 26px;
+}
+
+.contacts__controls {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 7px;
+}
+
+.contacts__order-call {
+  color: #ffffff;
+
+  background-color: $elements-color;
+}
+
+.contacts__ask-question {
+  color: $elements-color;
+
+  background-color: #ffffff;
+  border: 1px solid $elements-color;
+}
+
+.contacts__order-call,
+.contacts__ask-question {
+  width: 48%;
+  padding: 13px 10px 15px;
+
+  text-decoration: none;
+  text-align: center;
+
+  @include main-font(14px, 20px, 700, normal);
+}
+
+@media (min-width: $pretablet-width) {
+  .contacts {
+    width: 564px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .contacts {
+    width: auto;
+  }
+
+  .contacts__list {
+    flex-direction: column;
+    margin-bottom: 14px;
+  }
+
+  .contacts__item {
+    width: 235px;
+    margin-right: 0;
+  }
+
+  .contacts__item--phone {
+    width: auto;
+    justify-content: left;
+    margin-bottom: 17px;
+  }
+
+  .contacts__order-call {
+    display: none;
+  }
+
+  .contacts__ask-question {
+    min-width: 154px;
+  }
+}

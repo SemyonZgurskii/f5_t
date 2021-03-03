@@ -1,0 +1,202 @@
+.purchase-section__basic-info {
+  padding: 0 $side-padding-mobile 21px;
+
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.purchase-section__buy {
+  padding: 13px $side-padding-mobile;
+
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.purchase-section__delivery {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0;
+  margin-bottom: 12px;
+
+  @include main-font(13px, 20px, 400, normal);
+}
+
+.purchase-section__delivery-text {
+  margin-right: 5px;
+
+  color: #7b7b7b;
+}
+
+.purchase-section__delivery-time {
+  color: $elements-color;
+  font-size: 12px;
+}
+
+.purchase-section__gratis-delivery {
+  width: 100%;
+  padding-left: 1px;
+
+  color: #727272;
+}
+
+.purchase-section__controls-container {
+  padding-left: 1px;
+  padding-right: 2px;
+  margin-bottom: 20px;
+}
+
+.purchase-section__cart-add {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 13px 14px 16px;
+
+  color: #ffffff;
+
+  @include main-font(14px, 20px, 700, normal);
+
+  border: none;
+  background-color: $elements-color;
+
+  &:hover,
+  &:focus {
+    background-color: desaturate($elements-color, 20%);
+  }
+
+  &:active {
+    background-color: desaturate($elements-color, 30%);
+  }
+}
+
+.purchase-section__cart-add-text {
+  margin-left: 9px;
+  margin-right: 18px;
+}
+
+.purchase-section__cart-add-icon {
+  fill: #ffffff;
+}
+
+.purchase-section__one-click-buy {
+  display: block;
+  width: 100%;
+  padding: 13px 14px 15px;
+
+  color: $elements-color;
+  text-decoration: none;
+  text-align: center;
+
+  @include main-font(14px, 20px, 700, normal);
+
+  border: 1px solid $elements-color;
+
+  &:focus,
+  &:hover {
+    color: #ffffff;
+
+    background-color: desaturate($elements-color, 20%);
+  }
+
+  &:active {
+    background-color: darken($elements-color, 10%);
+  }
+}
+
+.purchase-section__special-offer {
+  position: relative;
+  padding-left: 21px;
+  padding-right: 20px;
+  margin-top: 0;
+
+  color: #222222;
+
+  @include main-font(13px, 18px, 400, normal);
+
+  &::before {
+    position: absolute;
+    content: "";
+    left: 1px;
+    top: 5px;
+    bottom: 2px;
+    width: 3px;
+
+    background-color: #bebebe;
+  }
+}
+
+@media (min-width: $pretablet-width) {
+  .purchase-section {
+    width: 564px;
+  }
+
+  .purchase-section__basic-info {
+    padding: 0;
+    margin-bottom: 20px;
+
+    border-bottom: none;
+  }
+
+  .purchase-section__buy {
+    padding: 0;
+
+    border-bottom: none;
+  }
+
+  .purchase-section__delivery {
+    margin-bottom: 25px;
+  }
+
+  .purchase-section__delivery-text,
+  .purchase-section__delivery-time,
+  .purchase-section__gratis-delivery {
+    font-size: 15px;
+    line-height: 20px;
+  }
+
+  .purchase-section__delivery-time {
+    margin-right: 11px;
+  }
+
+  .purchase-section__gratis-delivery {
+    width: auto;
+  }
+
+  .purchase-section__controls-container {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 0;
+    padding-right: 1px;
+    margin-left: -1px;
+    margin-bottom: 23px;
+  }
+
+  .purchase-section__one-click-buy,
+  .purchase-section__cart-add {
+    width: 270px;
+  }
+
+  .purchase-section__cart-add {
+    margin-bottom: 0;
+  }
+
+  .purchase-section__cart-add-text {
+    margin-left: 10px;
+    margin-right: 13px;
+  }
+
+  .purchase-section__special-offer {
+    padding-left: 18px;
+    margin-bottom: 0;
+
+    font-size: 14px;
+    line-height: 20px;
+
+    &::before {
+      left: -1px;
+      bottom: 6px;
+    }
+  }
+
+  .purchase-section__special-offer > br {
+    display: none;
+  }
+}

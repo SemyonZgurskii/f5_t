@@ -1,0 +1,20 @@
+.media-list {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 389px;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.media-list__item {
+  border: 1px solid #bebebe;
+}
+
+.media-list__image {
+  display: block;
+}
+
+//TODO: определить содержимое li (кнопка ?). Доделать мультимедиа снизу

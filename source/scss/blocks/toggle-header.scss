@@ -1,0 +1,84 @@
+.toggle-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.toggle-header--footer {
+  padding-right: 10px;
+}
+
+.toggle-header__title {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  text-transform: uppercase;
+
+  @include main-font(16px, 20px, 600, normal);
+}
+
+.toggle-header__button {
+  position: relative;
+  height: 20px;
+  width: 20px;
+  margin-top: 4px;
+  margin-right: -4px;
+
+  background-color: transparent;
+  border: none;
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: 9px;
+    right: 5px;
+    content: "";
+    display: block;
+    width: 10px;
+    height: 2px;
+
+    background-color: $elements-color;
+  }
+
+  &::before {
+    transform: rotate(90deg);
+  }
+}
+
+.toggle-header__button--opened {
+  &::before {
+    display: none;
+  }
+}
+
+.toggle-header--footer .toggle-header__button {
+  margin-top: 1px;
+
+  &::before,
+  &::after {
+    left: 3px;
+    width: 15px;
+
+    background-color: #b8b8b8;
+  }
+}
+
+.toggle-header--footer > .toggle-header__title {
+  text-transform: none;
+}
+
+@media (min-width: $desktop-width) {
+  .toggle-header__title {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .toggle-header--button-hiding > .toggle-header__button {
+    display: none;
+  }
+
+  .toggle-header--button-hiding {
+    padding-top: 12px;
+  }
+}
+

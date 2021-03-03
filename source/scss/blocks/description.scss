@@ -1,0 +1,11 @@
+@media (min-width: $pretablet-width) {
+  .description {
+    width: 564px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .description {
+    width: 534px;
+  }
+}

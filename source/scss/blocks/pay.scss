@@ -1,0 +1,59 @@
+.pay {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.pay__title {
+  margin-top: 0;
+  margin-bottom: 11px;
+
+  text-align: center;
+
+  @include main-font(16px, 30px, 700, normal);
+}
+
+.pay__list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: -8px;
+  padding-left: 0;
+
+  list-style: none;
+}
+
+.pay__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 46px;
+  height: 26px;
+  margin-bottom: 5px;
+  margin-right: 8px;
+
+  border: 1px solid #c6c6c6;
+}
+
+@media (min-width: $desktop-width) {
+  .pay {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .pay__title {
+    font-size: 18px;
+    line-height: 30px;
+
+    margin-bottom: 5px;
+    margin-right: 34px;
+  }
+
+  .pay__item {
+    width: 59px;
+    height: 33px;
+    margin-right: 10px;
+  }
+}

@@ -19,3 +19,11 @@ body {
   width: 1px;
   white-space: nowrap;
 }
+
+.js-hide {
+  margin-bottom: 0 !important;
+}
+
+.js-hide .js-toggle-target {
+  display: none;
+}

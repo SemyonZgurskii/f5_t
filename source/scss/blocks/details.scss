@@ -1,0 +1,101 @@
+.details__equipment {
+  padding: 16px $side-padding-mobile 0;
+  margin-bottom: 18px;
+}
+
+.details__characteristics {
+  padding: 5px $side-padding-mobile 0;
+}
+
+.details__description {
+  padding: 13px $side-padding-mobile 8px;
+}
+
+.details__brand-info {
+  padding: 12px $side-padding-mobile 9px;
+}
+
+.details__reviews {
+  padding: 9px $side-padding-mobile 10px;
+}
+
+.details__delivery-and-return {
+  padding: 8px $side-padding-mobile 10px;
+}
+
+.details__equipment,
+.details__characteristics,
+.details__description,
+.details__brand-info,
+.details__reviews {
+  border-bottom: 1px solid #e8e8e8;
+}
+
+@media (min-width: $pretablet-width) {
+  .details__equipment,
+  .details__characteristics,
+  .details__description,
+  .details__brand-info,
+  .details__delivery-and-return,
+  .details__reviews {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .details {
+    width: $max-content-width + 46px;
+    padding-left: 3px;
+    margin-left: -45px;
+
+    &::after {
+      display: table;
+      content: "";
+      clear: both;
+    }
+  }
+
+  .details__description {
+    padding-bottom: 10px;
+  }
+
+  .details__brand-info {
+    padding-bottom: 14px;
+  }
+
+  .details__reviews {
+    padding-top: 13px;
+    padding-bottom: 19px;
+  }
+
+  .details__delivery-and-return {
+    padding-top: 19px;
+  }
+
+  .details__equipment,
+  .details__description,
+  .details__brand-info,
+  .details__delivery-and-return,
+  .details__reviews {
+    float: left;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 45px;
+    margin-right: 40px;
+  }
+
+  .details__equipment {
+    margin-bottom: 3px;
+    padding-bottom: 0px;
+  }
+
+  .details__characteristics {
+    float: right;
+    padding-left: 0;
+    padding-right: 0;
+    margin-right: -1px;
+
+    border-bottom: none;
+  }
+}

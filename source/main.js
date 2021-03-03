@@ -21,3 +21,31 @@ menuButtonElement.addEventListener("click", () => {
     headerElement.classList.add(HeaderModifier.menuOpened);
   }
 })
+
+const JsToggleModifier = {
+  Container: "js-toggle-container",
+  Controller: "js-toggle-controller",
+}
+
+const buttonModifier = "toggle-header__button--opened";
+
+function setJsModifierToggle(parentClassName) {
+  const parentElement = document.querySelector(`.${parentClassName}`)
+  const toggleContainerElements = parentElement.querySelectorAll(`.${JsToggleModifier.Container}`);
+  toggleContainerElements.forEach((currentElement) => {
+    const toggleControllerElement = currentElement.querySelector(`.${JsToggleModifier.Controller}`);
+
+    toggleControllerElement.addEventListener("click", () => {
+      currentElement.classList.toggle("js-hide");
+
+      if (currentElement.classList.contains("js-hide")) {
+        toggleControllerElement.classList.remove(buttonModifier);
+      } else {
+        toggleControllerElement.classList.add(buttonModifier);
+      }
+    })
+  })
+}
+
+setJsModifierToggle("details");
+setJsModifierToggle("footer-menu");

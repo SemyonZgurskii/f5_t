@@ -1,0 +1,25 @@
+.chat-button {
+  position: fixed;
+  bottom: 379px;
+  right: 0;
+  display: block;
+  width: 53px;
+  height: 75px;
+  padding-top: 10px;
+  padding-left: 1px;
+
+  background-color: $elements-color;
+  border: none;
+  border-bottom-left-radius: 8px;
+  border-top-left-radius: 8px;
+}
+
+.chat-button__icon {
+  fill: #ffffff;
+}
+
+.chat-button__text {
+  color: #ffffff;
+
+  @include main-font(14px, 25px, 600, normal);
+}
