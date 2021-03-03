@@ -88,7 +88,7 @@
 
 @media (min-width: $desktop-width) {
   .main-footer__menu {
-    padding: 45px 165px 7px;
+    padding: 45px 35px 7px;
   }
 
   .main-footer__top-wrapper {
@@ -172,5 +172,15 @@
   .main-footer__company-data,
   .main-footer__company-address {
     text-align: left;
+  }
+}
+
+@media (min-width: 1550px) {
+  .main-footer__menu {
+    max-width: 1920px;
+    padding-left: 165px;
+    padding-right: 165px;
+    margin-right: auto;
+    margin-left: auto;
   }
 }

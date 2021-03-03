@@ -52,6 +52,8 @@
   .footer-menu {
     display: flex;
     justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
     width: auto;
   }
 
@@ -86,5 +88,11 @@
 
   .footer-menu__additional-info {
     margin-right: 22px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .footer-menu {
+    justify-content: space-between;
   }
 }

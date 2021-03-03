@@ -55,18 +55,19 @@ function setJsModifierToggle(parentClassName) {
   })
 }
 
-const desktopMediaQuery = window.matchMedia("(min-width: 1139px)");
-
-function onScreenSizeChange(evt) {
-  if (evt.matches) {
+function onScreenSizeChange() {
+  if (window.innerWidth >= 1139) {
+    console.log("Yoosnth");
     desktopShownElements.forEach((element) => {
-      element.classList.remove(JsToggleModifier.Hidden);
+      if (element.classList.contains(JsToggleModifier.Hidden)) {
+        element.classList.remove(JsToggleModifier.Hidden);
+      }
     })
   }
 }
 
-desktopMediaQuery.addListener(onScreenSizeChange);
-onScreenSizeChange(desktopMediaQuery);
-
 setJsModifierToggle("details");
 setJsModifierToggle("footer-menu");
+
+window.addEventListener("resize", onScreenSizeChange);
+onScreenSizeChange();
