@@ -57,7 +57,6 @@ function setJsModifierToggle(parentClassName) {
 
 function onScreenSizeChange() {
   if (window.innerWidth >= 1139) {
-    console.log("Yoosnth");
     desktopShownElements.forEach((element) => {
       if (element.classList.contains(JsToggleModifier.Hidden)) {
         element.classList.remove(JsToggleModifier.Hidden);
