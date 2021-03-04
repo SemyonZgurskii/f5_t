@@ -36,6 +36,15 @@
   background-color: transparent;
   border: none;
 
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.7
+  }
+
   &::before {
     position: absolute;
     display: block;
