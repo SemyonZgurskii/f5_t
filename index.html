@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="preload" href="assets/fonts/Gilroy-Regular.woff" as="font" crossorigin="anonymous">
+  <link rel="preload" href="assets/fonts/Gilroy-Regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="assets/fonts/Gilroy-Medium.woff" as="font" crossorigin="anonymous">
+  <link rel="preload" href="assets/fonts/Gilroy-Medium.woff2" as="font" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.min.css">
   <title>watch town</title>
 </head>
@@ -83,7 +87,7 @@
             </picture>
           </a>
           <div class="main-header__cart">
-            <a class="cart " href="#" >
+            <a class="cart " href="#" aria-label="корзина">
               <div class="cart__image-wrapper">
                 <svg class="cart__icon" xmlns="http://www.w3.org/2000/svg" width="26" height="21">
                   <use xlink:href="#cart-icon"></use>
@@ -228,7 +232,7 @@
         <section class="product-view">
           <h3 class="visually-hidden">внешний вид товара</h3>
           <div class="product-view__slider-navigation">
-            <button class="product-view__button-previous">
+            <button class="product-view__button-previous" aria-label="предыдущие слайды">
               <svg class="product-view__icon-previous" xmlns="http://www.w3.org/2000/svg" width="22" height="22">
                 <use xlink:href="#slider-arrow-icon"></use>
               </svg>
@@ -283,7 +287,7 @@
                 </li>
               </ul>
             </div>
-            <button class="product-view__button-next">
+            <button class="product-view__button-next" aria-label="следующие слайды">
               <svg class="product-view__icon-next" xmlns="http://www.w3.org/2000/svg" width="22" height="22">
                 <use xlink:href="#slider-arrow-icon"></use>
               </svg>
@@ -322,7 +326,7 @@
                   <p class="basic-info__dealer-text">official dealer</p>
                 </div>
                 <div class="basic-info__share">
-                  <button class="basic-info__share-button">
+                  <button class="basic-info__share-button" aria-label="поделиться">
                     <svg class="basic-info__share-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" >
                       <use xlink:href="#share-icon"></use>
                     </svg>
@@ -431,7 +435,7 @@
             <div class="equipment__header">
               <header class="toggle-header">
                 <h3 class="toggle-header__title">комплект поставки</h3>
-                <button class="toggle-header__button js-toggle-controller toggle-header__button--opened"></button>
+                <button class="toggle-header__button js-toggle-controller toggle-header__button--opened" aria-label="скрыть содержимое"></button>
               </header>
             </div>
             <div class="equipment__content js-toggle-target">
@@ -458,7 +462,7 @@
             <div class="characteristics__header">
               <header class="toggle-header toggle-header--button-hiding">
                 <h3 class="toggle-header__title">характеристики часов</h3>
-                <button class="toggle-header__button toggle-header__button--opened js-toggle-controller"></button>
+                <button class="toggle-header__button toggle-header__button--opened js-toggle-controller" aria-label="скрыть содержимое"></button>
               </header>
             </div>
             <div class="characteristics__content js-toggle-target">
@@ -639,7 +643,7 @@
             <div class="description__header">
               <header class="toggle-header">
                 <h3 class="toggle-header__title">описание часов</h3>
-                <button class="toggle-header__button"></button>
+                <button class="toggle-header__button" aria-label="показать содержимое"></button>
               </header>
             </div>
           </section>
@@ -649,7 +653,7 @@
             <div class="brand-info__header">
               <header class="toggle-header">
                 <h3 class="toggle-header__title">о бренде Emporio Armani</h3>
-                <button class="toggle-header__button"></button>
+                <button class="toggle-header__button" aria-label="показать содержимое"></button>
               </header>
             </div>
           </section>
@@ -659,7 +663,7 @@
             <div class="reviews__header">
               <header class="toggle-header">
                 <h3 class="toggle-header__title">отзывы и обзоры о модели</h3>
-                <button class="toggle-header__button toggle-header__button--opened js-toggle-controller"></button>
+                <button class="toggle-header__button toggle-header__button--opened js-toggle-controller" aria-label="скрыть содержимое"></button>
               </header>
             </div>
             <div class="reviews__content js-toggle-target">
@@ -843,7 +847,7 @@
             <div class="delivery-and-return__header">
               <header class="toggle-header">
                 <h3 class="toggle-header__title">доставка и возврат</h3>
-                <button class="toggle-header__button"></button>
+                <button class="toggle-header__button" aria-label="показать содержимое"></button>
               </header>
             </div>
           </section>
@@ -865,52 +869,64 @@
           <div class="product-list">
             <ul class="product-list__content">
               <li class="product-list__item">
-                <picture>
-                  <source media="(min-width: 600px)" srcset="assets/images/list_product_desktop@1x.jpg 1x, assets/images/list_product_desktop@2x.jpg 2x">
-                  <img class="product-list__image" src="assets/images/list_product_mobile@1x.jpg" srcset="assets/images/list_product_mobile@2x.jpg 2x" alt="изображение часов: Emporio Armani" width="100" height="120">
-                </picture>
-                <h3 class="product-list__title">Emporio Armani</h3>
-                <p class="product-list__article">AR1926</p>
+                <a class="product-list__item-link" href="#">
+                  <picture>
+                    <source media="(min-width: 600px)" srcset="assets/images/list_product_desktop@1x.jpg 1x, assets/images/list_product_desktop@2x.jpg 2x">
+                    <img class="product-list__image" src="assets/images/list_product_mobile@1x.jpg" srcset="assets/images/list_product_mobile@2x.jpg 2x" alt="изображение часов: Emporio Armani" width="100" height="120">
+                  </picture>
+                  <h3 class="product-list__title">Emporio Armani</h3>
+                  <p class="product-list__article">AR1926</p>
+                </a>
               </li>
               <li class="product-list__item">
-                <picture>
-                  <source media="(min-width: 600px)" srcset="assets/images/list_product_desktop@1x.jpg 1x, assets/images/list_product_desktop@2x.jpg 2x">
-                  <img class="product-list__image" src="assets/images/list_product_mobile@1x.jpg" srcset="assets/images/list_product_mobile@2x.jpg 2x" alt="изображение часов: Emporio Armani" width="100" height="120">
-                </picture>
-                <h3 class="product-list__title">Emporio Armani</h3>
-                <p class="product-list__article">AR1926</p>
+                <a class="product-list__item-link" href="#">
+                  <picture>
+                    <source media="(min-width: 600px)" srcset="assets/images/list_product_desktop@1x.jpg 1x, assets/images/list_product_desktop@2x.jpg 2x">
+                    <img class="product-list__image" src="assets/images/list_product_mobile@1x.jpg" srcset="assets/images/list_product_mobile@2x.jpg 2x" alt="изображение часов: Emporio Armani" width="100" height="120">
+                  </picture>
+                  <h3 class="product-list__title">Emporio Armani</h3>
+                  <p class="product-list__article">AR1926</p>
+                </a>
               </li>
               <li class="product-list__item">
-                <picture>
-                  <source media="(min-width: 600px)" srcset="assets/images/list_product_desktop@1x.jpg 1x, assets/images/list_product_desktop@2x.jpg 2x">
-                  <img class="product-list__image" src="assets/images/list_product_mobile@1x.jpg" srcset="assets/images/list_product_mobile@2x.jpg 2x" alt="изображение часов: Emporio Armani" width="100" height="120">
-                </picture>
-                <h3 class="product-list__title">Emporio Armani</h3>
-                <p class="product-list__article">AR1926</p>
+                <a class="product-list__item-link" href="#">
+                  <picture>
+                    <source media="(min-width: 600px)" srcset="assets/images/list_product_desktop@1x.jpg 1x, assets/images/list_product_desktop@2x.jpg 2x">
+                    <img class="product-list__image" src="assets/images/list_product_mobile@1x.jpg" srcset="assets/images/list_product_mobile@2x.jpg 2x" alt="изображение часов: Emporio Armani" width="100" height="120">
+                  </picture>
+                  <h3 class="product-list__title">Emporio Armani</h3>
+                  <p class="product-list__article">AR1926</p>
+                </a>
               </li>
               <li class="product-list__item">
-                <picture>
-                  <source media="(min-width: 600px)" srcset="assets/images/list_product_desktop@1x.jpg 1x, assets/images/list_product_desktop@2x.jpg 2x">
-                  <img class="product-list__image" src="assets/images/list_product_mobile@1x.jpg" srcset="assets/images/list_product_mobile@2x.jpg 2x" alt="изображение часов: Emporio Armani" width="100" height="120">
-                </picture>
-                <h3 class="product-list__title">Emporio Armani</h3>
-                <p class="product-list__article">AR1926</p>
+                <a class="product-list__item-link" href="#">
+                  <picture>
+                    <source media="(min-width: 600px)" srcset="assets/images/list_product_desktop@1x.jpg 1x, assets/images/list_product_desktop@2x.jpg 2x">
+                    <img class="product-list__image" src="assets/images/list_product_mobile@1x.jpg" srcset="assets/images/list_product_mobile@2x.jpg 2x" alt="изображение часов: Emporio Armani" width="100" height="120">
+                  </picture>
+                  <h3 class="product-list__title">Emporio Armani</h3>
+                  <p class="product-list__article">AR1926</p>
+                </a>
               </li>
               <li class="product-list__item">
-                <picture>
-                  <source media="(min-width: 600px)" srcset="assets/images/list_product_desktop@1x.jpg 1x, assets/images/list_product_desktop@2x.jpg 2x">
-                  <img class="product-list__image" src="assets/images/list_product_mobile@1x.jpg" srcset="assets/images/list_product_mobile@2x.jpg 2x" alt="изображение часов: Emporio Armani" width="100" height="120">
-                </picture>
-                <h3 class="product-list__title">Emporio Armani</h3>
-                <p class="product-list__article">AR1926</p>
+                <a class="product-list__item-link" href="#">
+                  <picture>
+                    <source media="(min-width: 600px)" srcset="assets/images/list_product_desktop@1x.jpg 1x, assets/images/list_product_desktop@2x.jpg 2x">
+                    <img class="product-list__image" src="assets/images/list_product_mobile@1x.jpg" srcset="assets/images/list_product_mobile@2x.jpg 2x" alt="изображение часов: Emporio Armani" width="100" height="120">
+                  </picture>
+                  <h3 class="product-list__title">Emporio Armani</h3>
+                  <p class="product-list__article">AR1926</p>
+                </a>
               </li>
               <li class="product-list__item">
-                <picture>
-                  <source media="(min-width: 600px)" srcset="assets/images/list_product_desktop@1x.jpg 1x, assets/images/list_product_desktop@2x.jpg 2x">
-                  <img class="product-list__image" src="assets/images/list_product_mobile@1x.jpg" srcset="assets/images/list_product_mobile@2x.jpg 2x" alt="изображение часов: Emporio Armani" width="100" height="120">
-                </picture>
-                <h3 class="product-list__title">Emporio Armani</h3>
-                <p class="product-list__article">AR1926</p>
+                <a class="product-list__item-link" href="#">
+                  <picture>
+                    <source media="(min-width: 600px)" srcset="assets/images/list_product_desktop@1x.jpg 1x, assets/images/list_product_desktop@2x.jpg 2x">
+                    <img class="product-list__image" src="assets/images/list_product_mobile@1x.jpg" srcset="assets/images/list_product_mobile@2x.jpg 2x" alt="изображение часов: Emporio Armani" width="100" height="120">
+                  </picture>
+                  <h3 class="product-list__title">Emporio Armani</h3>
+                  <p class="product-list__article">AR1926</p>
+                </a>
               </li>
             </ul>
           </div>
@@ -927,7 +943,7 @@
         <section class="footer-menu__contacts js-hide js-desktop-showed js-toggle-container">
           <div class="toggle-header toggle-header--button-hiding toggle-header--footer">
             <h3 class="toggle-header__title">Связаться с нами</h3>
-            <button class="toggle-header__button js-toggle-controller"></button>
+            <button class="toggle-header__button js-toggle-controller" aria-label="показать содержимое"></button>
           </div>
           <div class="footer-menu__contacts-wrapper js-toggle-target js-toggle-target--desktop-showed">
             <div class="contacts">
@@ -968,7 +984,7 @@
         <section class="footer-menu__info js-hide js-toggle-container js-desktop-showed">
           <div class="toggle-header toggle-header--button-hiding toggle-header--footer">
             <h3 class="toggle-header__title">Информация</h3>
-            <button class="toggle-header__button js-toggle-controller"></button>
+            <button class="toggle-header__button js-toggle-controller" aria-label="показать содержимое"></button>
           </div>
           <ul class="footer-menu__list js-toggle-target">
             <li class="footer-menu__item">
@@ -1015,7 +1031,7 @@
         <section class="footer-menu__navigation js-hide js-desktop-showed js-toggle-container">
           <div class="toggle-header toggle-header--button-hiding toggle-header--footer">
             <h3 class="toggle-header__title">Разделы сайта</h3>
-            <button class="toggle-header__button js-toggle-controller"></button>
+            <button class="toggle-header__button js-toggle-controller" aria-label="показать содержимое"></button>
           </div>
           <ul class="footer-menu__list js-toggle-target">
             <li class="footer-menu__item">
@@ -1050,7 +1066,7 @@
         <section class="footer-menu__additional-info js-hide js-desktop-showed js-toggle-container">
           <div class="toggle-header toggle-header--button-hiding toggle-header--footer">
             <h3 class="toggle-header__title">Интересно почитать</h3>
-            <button class="toggle-header__button js-toggle-controller"></button>
+            <button class="toggle-header__button js-toggle-controller" aria-label="показать содержимое"></button>
           </div>
           <ul class="footer-menu__list js-toggle-target">
             <li class="footer-menu__item">
@@ -1118,28 +1134,28 @@
           <h2 class="social__title">Мы в сети</h2>
           <ul class="social__list">
             <li class="social__item">
-              <a href="#" class="social__link">
+              <a href="#" class="social__link" aria-label="Youtube">
                 <svg class="social__icon" width="20" height="14">
                   <use xlink:href="#youtube-icon"></use>
                 </svg>
               </a>
             </li>
             <li class="social__item">
-              <a href="#" class="social__link">
+              <a href="#" class="social__link" aria-label="Instagram">
                 <svg class="social__icon" width="17" height="17">
                   <use xlink:href="#instagram-icon"></use>
                 </svg>
               </a>
             </li>
             <li class="social__item">
-              <a href="#" class="social__link">
+              <a href="#" class="social__link" aria-label="Vk">
                 <svg class="social__icon" width="21" height="21">
                   <use xlink:href="#vk-icon"></use>
                 </svg>
               </a>
             </li>
             <li class="social__item">
-              <a href="#" class="social__link">
+              <a href="#" class="social__link" aria-label="Facebook">
                 <svg class="social__icon" width="20" height="17">
                   <use xlink:href="#facebook-icon"></use>
                 </svg>
