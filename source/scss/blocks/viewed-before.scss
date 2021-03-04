@@ -67,6 +67,23 @@
   }
 }
 
+.viewed-before__clear-button:hover,
+.viewed-before__clear-button:focus {
+  border-color: #000000;
+
+  &::before,
+  &::after {
+    background-color: #000000;
+  }
+}
+
+.viewed-before__clear-button:active {
+  &::before,
+  &::after {
+    background-color: darken(#9e9e9e, 5%);
+  }
+}
+
 @media (min-width: $pretablet-width) {
   .viewed-before {
     width: 564px;
