@@ -135,7 +135,7 @@
 
   .product-view__icon-next {
     top: auto;
-    bottom: -6px;
+    bottom: -3px;
 
     transform: translateX(-50%);
   }
@@ -148,6 +148,7 @@
 
   .product-view__media-list {
     display: block;
+    margin-bottom: 3px;
   }
 
   .product-view__image {
